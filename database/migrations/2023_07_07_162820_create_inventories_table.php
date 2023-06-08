@@ -1,5 +1,6 @@
 <?php
-
+use App\Models\User;
+use App\Models\Book;
 use App\Models\Municipality;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
