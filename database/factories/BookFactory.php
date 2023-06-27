@@ -19,7 +19,8 @@ class BookFactory extends Factory
     {
         return [
             'name' => fake()->words(rand(3, 5), true),
-            'publisher' => fake()->
+            'publisher' => fake()->name(),
+            'edition' => fake()->randomDigitNotNull(),
             'date' => fake()->date(),
         ];
     }

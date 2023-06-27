@@ -22,15 +22,16 @@ class InventoryFactory extends Factory
         $books = Book::all()->pluck('id');
         $departament = Departament::all()->pluck('id');
         $user = User::all()->pluck('id');
+
         return [
-            'book_id'->$books->random(),
-            'adress'=>fake()->unique()->address(),
-            'departament_id'->$departament->random(),
+            'book_id'=>$books->random(),
+            'address'=>fake()->unique()->address(),
+            'department_id'=>$departament->random(),
             'price'=>fake()->randomFloat(2, 0, 50),
             'image'=>fake()->randomNumber(5, false),
             'available'=>fake()->boolean(),
             'description'=>fake()->paragraph(),
-            'user_id'->$user->random(),
+            'user_id'=>$user->random(),
             'fee'=>fake()->randomFloat(2, 00, 5),
             'date'=>fake()->date(),
 

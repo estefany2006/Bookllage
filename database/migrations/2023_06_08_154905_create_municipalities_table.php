@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('municipalities', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Departament::class)->constrained();
+            $table->foreignIdFor(Department::class)->constrained();
             $table->string('name');
             $table->timestamps();
         });

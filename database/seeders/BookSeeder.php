@@ -25,42 +25,6 @@ class BookSeeder extends Seeder
             'publisher' => 'Yo',
             'edition' => 'N/A',
             'date' => '2022'
-        ]);
-        Book::create([
-            'name' => 'Libro2',
-            'publisher' => 'tu',
-            'edition' => 'N/A',
-            'date' => '2023'
-        ]); Book::create([
-            'name' => 'Libro3',
-            'publisher' => 'el',
-            'edition' => 'N/A',
-            'date' => '2090'
-        ]); Book::create([
-            'name' => 'Libro4',
-            'publisher' => 'ella',
-            'edition' => 'N/A',
-            'date' => '2012'
-        ]); Book::create([
-            'name' => 'Libro6',
-            'publisher' => 'she',
-            'edition' => 'N/A',
-            'date' => '2014'
-        ]); Book::create([
-            'name' => 'Libro7',
-            'publisher' => 'he',
-            'edition' => 'N/A',
-            'date' => '2014'
-        ]); Book::create([
-            'name' => 'Libro8',
-            'publisher' => 'they',
-            'edition' => 'N/A',
-            'date' => '2022'
-        ]); Book::create([
-            'name' => 'Libro9',
-            'publisher' => 'you',
-            'edition' => 'N/A',
-            'date' => '1209'
         ]);*/
 
     }
