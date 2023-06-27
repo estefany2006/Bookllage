@@ -42,4 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function universities(){
+       return $this->belongsTo(University::class);
+    }
+
+    public function (){
+        return $this->belongsTo(University::class);
+}
 }

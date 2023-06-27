@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Municipality extends Model
 {
     use HasFactory;
+
+    public function districts()
+    {
+        return $this->hasMany(District::class);
+    }
+
+    public function departments()
+    {
+        return $this->belongsTo(Departament::class);
+    }
 }
