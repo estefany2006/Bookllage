@@ -47,7 +47,8 @@ class User extends Authenticatable
        return $this->belongsTo(University::class);
     }
 
-    public function (){
-        return $this->belongsTo(University::class);
-}
+    public function inventories()
+    {
+        return $this->belongsTo(Inventory::class);
+    }
 }
