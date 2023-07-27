@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('bookdescription');
+});
+
 Route::get('/login', function () {
     return view('login');
 })->name('login')->middleware(['guest']);
