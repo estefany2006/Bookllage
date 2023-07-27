@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+<x-layout>
+
+    <div class="container bg-success p-2 text-dark bg-opacity-50 position-absolute top-50 start-50 translate-middle">
+        <form action="/login" method="POST">
+            @csrf
+            <x-input label="Email" Type="email" name="email" />
 
 
+            <x-input label="Password" Type="password" name="password" />
 
-</body>
-</html>
+
+            <button type="Submit" class="btn btn-info mt-3 ">Continue</button>
+        </form>
+    </div>
+
+   
+
+</x-layout>

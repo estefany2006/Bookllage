@@ -14,18 +14,25 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(5)->create();
-        /*
+        User::factory(1)->create([
+            'first_name' => 'Anibal',
+            'last_name' => 'Mendez',
+            'email' => 'anibal.mendez2024@poma.superate.org.sv',
+            'support_email' => 'ab@',
+            'password' => 'password'
+        ]);
 
-        UserSeeder::create([
-            'first_name' => 'aaaaa',
-            'last_name' => 'bbbbb',
-            'email' => 'ab@',
+
+       /* UserSeeder::create([
+            'first_name' => 'Anibal',
+            'last_name' => 'Mendez',
+            'email' => 'anibal.mendez2024@poma.superate.org.sv',
             'email_verified_at' => 'ad@',
             'support_email' => 'ab@',
-            'password' => '123'
-        ]);
-        UserSeeder::create([
+            'password' => 'password'
+        ]);*/
+
+        /*UserSeeder::create([
             'first_name' => 'eeeee',
             'last_name' => 'cccc',
             'email' => 'ec@',

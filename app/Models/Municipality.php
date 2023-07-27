@@ -16,7 +16,7 @@ class Municipality extends Model
 
     public function departments()
     {
-        return $this->belongsTo(Departament::class);
+        return $this->belongsTo(Department::class);
     }
 
     public function inventories()

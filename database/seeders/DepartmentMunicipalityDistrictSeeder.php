@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\District;
-use App\Models\Departament;
+use App\Models\Department;
 use App\Models\Municipality;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -572,13 +572,13 @@ class DepartmentMunicipalityDistrictSeeder extends Seeder
         ]
         ]);
 
-        Departament::factory(count($states))->sequence(fn ($sequence) => [
+        Department::factory(count($states))->sequence(fn ($sequence) => [
             'name' => $states[$sequence->index]['name']
         ])->create()->each(function ($state) use ($states) {
             $towns = collect($states->where('name', $state->name)->first()['towns']);
             Municipality::factory(count($towns))->sequence(fn ($sequence) => [
                 'name' => $towns[$sequence->index]['name'],
-                'departament_id' => $state->id
+                'department_id' => $state->id
             ])->create()->each(function ($town) use ($towns) {
                 $districts = $towns->where('name', $town->name)->first()['districts'];
                 District::factory(count($districts))->sequence(fn ($sequence) => [

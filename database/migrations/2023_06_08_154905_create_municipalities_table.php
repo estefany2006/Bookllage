@@ -1,7 +1,6 @@
 <?php
 
-use App\Models\Departament;
-use App\Models\District;
+use App\Models\Department;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

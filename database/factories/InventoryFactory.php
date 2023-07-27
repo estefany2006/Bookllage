@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Municipality;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Book;
-use App\Models\Departament;
+use App\Models\Department;
 use Illuminate\Foundation\Auth\User;
 
 /**
@@ -20,13 +21,13 @@ class InventoryFactory extends Factory
     public function definition(): array
     {
         $books = Book::all()->pluck('id');
-        $departament = Departament::all()->pluck('id');
+        $municipalities = Municipality::all()->pluck('id');
         $user = User::all()->pluck('id');
 
         return [
             'book_id'=>$books->random(),
             'address'=>fake()->unique()->address(),
-            'department_id'=>$departament->random(),
+            'municipality_id'=>$municipalities->random(),
             'price'=>fake()->randomFloat(2, 0, 50),
             'image'=>fake()->randomNumber(5, false),
             'available'=>fake()->boolean(),
