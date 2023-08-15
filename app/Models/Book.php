@@ -9,6 +9,10 @@ class Book extends Model
 {
     use HasFactory;
 
+    protected $guarded = [
+        'id'
+    ];
+    
     public function inventories()
     {
         return $this->belongsTo(Inventory::class);
