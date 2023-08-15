@@ -1,0 +1,38 @@
+.d-item {
+    height: 500px;
+}
+
+.d-img {
+    height: 100px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.nosotros {
+    text-align: justify;
+    line-height: 2em;
+    text-align: center;
+}
+
+.universidades-fila {
+    width: 100%;
+    text-align: center;
+}
+
+@media(max-width: 576px) {
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+#bg-contacto {
+    position: relative;
+    top: 130px;
+}
+
+#seccion-contacto {
+    background-color: #1b2a4e;
+    min-height: 500px;
+    position: relative;
+}
