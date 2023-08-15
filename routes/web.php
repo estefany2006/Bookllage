@@ -2,6 +2,8 @@
 
 use App\Models\University;
 use App\Models\User;
+use App\Models\Book;
+use App\Models\Inventory;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/', function () {
+    return view('bookdescription');
 });
 
 Route::get('/login', function () {
@@ -68,7 +74,6 @@ Route::get('/signup', function () {
 Route::post('/signup', function () {
 
     $atributtes = request()->validate([
-
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
         'email' => 'required|email|max:255',
@@ -77,8 +82,7 @@ Route::post('/signup', function () {
         'password' => 'required|string|max:255'
     ]);
 
-
-    $user = User::create( $atributtes );
+    $user = User::create($atributtes);
 
     if (Auth::login($user)) {
         request()->session()->regenerate();
@@ -87,9 +91,34 @@ Route::post('/signup', function () {
 
     return back()->withErrors([
         'email' => 'Account not found'
-
     ]);
-
 });
 
+Route::get('/registerBook', function () {
+    return view('registerBook');
+});
+
+Route::post('/registerBook', function () {
+
+    $atributtes = request()->validate([
+        'name' => 'required|string|max:255',
+        'publisher' => 'required|string|max:255',
+        'edition' => 'required|string|max:255',
+        'date' => 'required|date',
+    ]);
+
+
+    if($book = Book::create($atributtes))
+    {
+        return redirect('bookTransaction')-with($book);
+    };
+
+    return back()->withErrors([
+        'name' => 'Error'
+    ]);
+});
+
+Route::get('/bookTransaction', function () {
+    return view('bookTransaction');
+});
 
