@@ -258,7 +258,7 @@
                                 <img src="{{ asset('img/Kelvin.png') }}" class="card-img-top" alt="Estefany">
                                 <div class="card-body">
                                     <h5 class="card-title">Kelvin Gamez</h5>
-                                    <p class="card-text">he is currently specialized in the Back-end part.</p>
+                                    <p class="card-text">He is currently specialized in the Back-end part.</p>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +276,7 @@
                                 <img src="{{ asset('img/Anibal.png') }}" class="card-img-top" alt="Estefany">
                                 <div class="card-body">
                                     <h5 class="card-title">Anibal Mendez</h5>
-                                    <p class="card-text">She is currently specialized in the Back-end part.</p>
+                                    <p class="card-text">He is currently specialized in the Back-end part.</p>
                                 </div>
                             </div>
                         </div>
