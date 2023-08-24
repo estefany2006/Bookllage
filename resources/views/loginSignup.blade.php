@@ -72,7 +72,7 @@
                                     <span class="fs-3 py-4 fw-bold" style="color: #46A2FD">Registrarse</span>
                                     <form action="/signup" method="POST" class="mt-3 position-relative" x-data="{secondPart: false}">
                                         @csrf
-                                        <div class="transition-opacity position-absolute w-100" :class="!secondPart ? 'opacity-100 z-1' : 'opacity-0 z-n1'">
+                                        <div class="transition-opacity position-absolute w-100" :class="!secondPart ? 'opacity-100 z-2' : 'opacity-0 z-1'">
                                             <x-input label="Nombres" name="first_name"/>
                                             <x-input label="Apellidos" name="last_name"/>
                                             <x-input label="ID de estudiante" name="student_id"/>
@@ -80,11 +80,11 @@
                                                 <option value="1">UCA</option>
                                             </x-select>
                                         </div>
-                                        <div class="transition-opacity" :class="secondPart ? 'opacity-100 z-1' : 'opacity-0'">
-                                            <x-input label="Correo Electrónico" name="email"/>
-                                            <x-input label="Correo Electrónico de respaldo" name="support_email"/>
-                                            <x-input label="Contraseña" name="password"/>
-                                            <x-input label="Confirmacion Contraseña" name="password_confirmation"/>
+                                        <div class="transition-opacity position-relative" :class="secondPart ? 'opacity-100 z-2' : 'opacity-0 z-1'">
+                                            <x-input label="Correo Electrónico" type="email" name="email"/>
+                                            <x-input label="Correo Electrónico de respaldo" type="email" name="support_email"/>
+                                            <x-input label="Contraseña" type="password" name="password"/>
+                                            <x-input label="Confirmacion Contraseña" type="password" name="password_confirmation"/>
                                         </div>
                                         <div class="py-4 mt-2">
                                             <div x-show="!secondPart" @click="secondPart = true">
