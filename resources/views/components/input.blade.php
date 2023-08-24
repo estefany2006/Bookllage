@@ -1,12 +1,10 @@
-@props(['label', 'Type', 'name'])
+@props(['label', 'name', 'type' => 'text'])
 
 
-<div class="form-floating mb-3">
-    <input type="{{ $Type }}" class="form-control" id="floatingInput" name="{{ $name }}"
-        placeholder="name@example.com">
-    <label for="floatingInput">{{ $label }}</label>
+<div class="mb-3">
+    <input type="{{ $type }}" class="form-control border-0 bg-body-secondary" id="floatingInput" name="{{ $name }}"
+           placeholder="{{ $label }}">
     @error($name)
-        <span class="text-danger">{{ $message }}</span>
+    <span class="text-danger">{{ $message }}</span>
     @enderror
-
 </div>
