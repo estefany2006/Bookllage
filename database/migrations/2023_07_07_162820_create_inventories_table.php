@@ -21,7 +21,7 @@ return new class extends Migration
             $table->float('price');
             $table->integer('image');
             $table->boolean('available');
-            $table->string('description');
+            $table->text('description');
 
             $table->foreignIdFor(User::class)->constrained();
             $table->float('fee');
