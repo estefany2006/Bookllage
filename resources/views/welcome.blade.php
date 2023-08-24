@@ -1,4 +1,7 @@
+<x-nav.navbar/>
+
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -141,35 +144,6 @@
 
 <body>
     <div class="overflow-x-hidden">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="{{ asset('img/logonarbar.png') }}" class="img-fluid"
-                        width="80px" height="80px" alt="logo">Booket</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link " href="introduccion">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Our work</a>
-                            </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">contactanos</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="margin-top: 79.55px">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -188,7 +162,7 @@
                             Let's give books
                         </p>
                         <h1 class="display-1 fw-bolder text-capitalize">second chance</h1>
-                        <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Get strated</button>
+                        <a href="/login" class="btn btn-primary">Get start</a>
                     </div>
                 </div>
 
@@ -248,7 +222,7 @@
             </div>
         </section>
 
-        <section class="about-us" id="aboutus">
+        <section class="about-us" id="about_us">
             <h2 class="text-center my-5">About us</h2>
             <div class="container">
                 <div class="row mx-auto my-5 about-us">

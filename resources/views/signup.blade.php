@@ -1,33 +1,48 @@
 <x-layout>
 
-    <div class="container bg-success p-2 text-dark bg-opacity-50 position-absolute top-50 start-50 translate-middle">
-        <form action="/signup" method="POST">
-            @csrf
+    <x-nav.navbar />
 
-            <x-input label="Firstname" Type="firstname" name="first_name" />
+    <br>
 
-            <x-input label="Lastname" Type="lastname" name="last_name" />
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mx-auto text-center">
+                <div class="card" style="background-color: #3D3894;">
+                    <div class="card-header"> <h2>Sign up</h2></div>
+                    <div class="card-body">
+                        <form action="/signup" method="POST">
+                            @csrf
 
-            <x-input label="Email" Type="email" name="email" />
+                            <x-input label="First Name" Type="text" name="first_name" />
 
-            <x-input label="Email" Type="email" name="support_email" />
+                            <x-input label="Last Name" Type="text" name="last_name" />
 
-            <select class="form-select mb-3" name="university_id">
-                <option selected>Select your university</option>
-                @foreach ($universities as $university)
-                    <option value="{{ $university->id }}">{{ $university->name }}</option>
-                @endforeach
-            </select>
+                            <x-input label="Email" Type="email" name="email" />
 
-            <x-input label="Password" Type="password" name="password" />
+                            <x-input label="Support Email" Type="email" name="support_email" />
 
+                            <div class="mb-3">
+                                <label for="university_id" class="form-label">Select your university</label>
+                                <select class="form-select" name="university_id">
+                                    <option selected></option>
+                                    @foreach ($universities as $university)
+                                        <option value="{{ $university->id }}">{{ $university->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
 
+                            <x-input label="Password" Type="password" name="password" />
 
+                            <x-buttom type="submit" text="continue"/>
 
-            <button type="Submit" class="btn btn-info mt-3 ">Continue</button>
-        </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-
 </x-layout>
+
+
+

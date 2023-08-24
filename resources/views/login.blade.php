@@ -1,21 +1,30 @@
 <x-layout>
 
-    <div class="container bg-success p-2 text-dark bg-opacity-50 position-absolute top-50 start-50 translate-middle">
-        <form class="" action="/login" method="POST">
-            @csrf
+    <x-nav.navbar />
 
-            <h2 class="fw-bold text-center py-3">Login</h2>
+    <br>
 
-            <x-input label="Email" Type="email" name="email" />
+    <div class="container mt-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 mx-auto text-center">
+                <div class="card" style="background-color: #3D3894;">
+                    <div class="card-header">
+                        <h2>Login</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="/login" method="POST">
+                            @csrf
 
+                            <x-input label="Email" Type="email" name="email" />
 
-            <x-input label="Password" Type="password" name="password" />
+                            <x-input label="Password" Type="password" name="password" />
 
-            <x-buttom type="submit" text="login"/>
+                            <x-buttom type="submit" text="Login" />
 
-        </form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
 </x-layout>
