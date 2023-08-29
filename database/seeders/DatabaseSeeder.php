@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             UniversitySeeder::class,
             DepartmentMunicipalityDistrictSeeder::class,
             UserSeeder::class,
+            CategorySeeder::class,
             BookSeeder::class,
             InventorySeeder::class,
         ]);

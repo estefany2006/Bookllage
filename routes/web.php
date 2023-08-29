@@ -17,37 +17,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
+Route::redirect('home', '/categories');
+
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+Route::get('/categories', function () {
+
+    return view('categories', [
+        'user' => Auth::user(),
+    ]);
+
+})->middleware(['auth']);
+
+
+Route::get('/bookdescription', function () {
     return view('bookdescription');
 });
 
-Route::get('/loginSignup' , function () {
-    return view('loginSignup');
-});
-
-Route::post('/loginSinup', function () {
-    return view('loginSignup');
-});
-
 Route::get('/login', function () {
-    return view('login');
+    return view('loginSignup');
 })->name('login')->middleware(['guest']);
 
 Route::post('/login', function () {
-
     $atributes = request()->validate([
-
-        'email' => 'required|email|max:255',
-        'password' => 'required|string|max:255'
+        'login_email' => 'required|email|max:255',
+        'login_password' => 'required|string|max:255'
     ]);
 
-    if (Auth::attempt($atributes)) {
+    if (Auth::attempt(['email' => $atributes['login_email'], 'password' => $atributes['login_password']])) {
         request()->session()->regenerate();
-        return redirect('home');
+        return redirect('categories');
     }
 
     return back()->withErrors([
@@ -57,13 +58,6 @@ Route::post('/login', function () {
 
 });
 
-Route::get('/home', function () {
-
-    return view('home', [
-        'user' => Auth::user(),
-    ]);
-
-})->middleware(['auth']);
 
 Route::post('/logout', function () {
     Auth::logout();
@@ -94,7 +88,7 @@ Route::post('/signup', function () {
 
     if (Auth::login($user)) {
         request()->session()->regenerate();
-        return redirect('home');
+        return redirect('categories');
     }
 
     return back()->withErrors([
@@ -130,3 +124,37 @@ Route::get('/bookTransaction', function () {
     return view('bookTransaction');
 });
 
+Route::get('/categories', function () {
+    return view('categories');
+});
+
+
+Route::get('/medicine', function () {
+    return view('medicine', [
+        'inventory' => Inventory::where('available', true)->get()
+    ]);
+});
+
+Route::get('/computerEngineering', function () {
+    return view('computerEngineering');
+});
+
+Route::get('/psychology', function () {
+    return view('psychology');
+});
+
+Route::get('/economic', function () {
+    return view('economic');
+});
+
+Route::get('/english', function () {
+    return view('english');
+});
+
+Route::get('/marketing', function () {
+    return view('marketing');
+});
+
+Route::get('/email', function () {
+    return view('email');
+});

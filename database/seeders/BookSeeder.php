@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Book;
@@ -13,7 +14,11 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        Book::factory(25)->create();
+        $categories_id = Category::pluck('id');
+
+        Book::factory(25)->sequence(fn($sqn) => [
+            'category_id' => $categories_id->random()
+        ])->create();
         /*Book::create([
             'name' => 'Anatomia de gray',
             'publisher' => 'Henry Gray',
