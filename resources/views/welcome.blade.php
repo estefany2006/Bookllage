@@ -128,14 +128,14 @@
 
         .img-1 {
             margin-right: 10px;
-            width: 215;
-            height: 215;
+            width: 250px;
+            height: 250px;
         }
 
         .img-2 {
             margin-left: 10px;
-            width: 215;
-            height: 215;
+            width: 250px;
+            height: 250px;
         }
 
 
