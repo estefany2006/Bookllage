@@ -162,7 +162,7 @@
                             Let's give books
                         </p>
                         <h1 class="display-1 fw-bolder text-capitalize">second chance</h1>
-                        <a href="/login" class="btn btn-primary">Get start</a>
+                        <a href="/login" class="btn btn-primary">Get started</a>
                     </div>
                 </div>
 
@@ -222,7 +222,7 @@
             </div>
         </section>
 
-        <section class="about-us" id="about_us">
+        <section class="about-us" id="about_us" style="scroll-margin-top: 100px">
             <h2 class="text-center my-5">About us</h2>
             <div class="container">
                 <div class="row mx-auto my-5 about-us">
