@@ -14,7 +14,7 @@
                 <div class="col-lg-5 col-md-10 col-sm-12"></div>
                 <div class="form-box px-5 py-4">
                     <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
-                        <h2 class="text-center mb-4">Register Book</h2>
+                        <h2 class="text-center mb-4">Register</h2>
                         <form action="/signup" method="POST">
                             @csrf
 
