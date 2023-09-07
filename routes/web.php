@@ -41,12 +41,12 @@ Route::get('/login', function () {
 })->name('login')->middleware(['guest']);
 
 Route::post('/login', function () {
-    $atributes = request()->validate([
+    $atributtes = request()->validate([
         'login_email' => 'required|email|max:255',
         'login_password' => 'required|string|max:255'
     ]);
 
-    if (Auth::attempt(['email' => $atributes['login_email'], 'password' => $atributes['login_password']])) {
+    if (Auth::attempt(['email' => $atributtes['login_email'], 'password' => $atributtes['login_password']])) {
         request()->session()->regenerate();
         return redirect('categories');
     }
@@ -65,22 +65,22 @@ Route::post('/logout', function () {
     return redirect('login');
 })->middleware(['auth']);
 
+
 Route::get('/signup', function () {
-    return view('signup', [
+    return view('loginSignup', [
         'universities' => University::all()
     ]);
 })->name('login')->middleware(['guest']);
-
-
 
 Route::post('/signup', function () {
 
     $atributtes = request()->validate([
         'first_name' => 'required|string|max:255',
         'last_name' => 'required|string|max:255',
+        'student_id' => 'required|string|max:15',
+        'university_id' => 'required|exists:universities,id',
         'email' => 'required|email|max:255',
         'support_email' => 'required|email|max:255',
-        'university_id' => 'required|exists:universities,id',
         'password' => 'required|string|max:255'
     ]);
 
@@ -110,9 +110,8 @@ Route::post('/registerBook', function () {
     ]);
 
 
-    if($book = Book::create($atributtes))
-    {
-        return redirect('bookTransaction')-with($book);
+    if ($book = Book::create($atributtes)) {
+        return redirect('bookTransaction') - with($book);
     };
 
     return back()->withErrors([
@@ -126,35 +125,55 @@ Route::get('/bookTransaction', function () {
 
 Route::get('/categories', function () {
     return view('categories');
-});
+})->name('login')->middleware(['auth']);
 
 
 Route::get('/medicine', function () {
     return view('medicine', [
-        'inventory' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->get()
     ]);
 });
 
 Route::get('/computerEngineering', function () {
-    return view('computerEngineering');
+    return view('computerEngineering', [
+        'inventoryItems' => Inventory::where('available', true)->get()
+    ]);
 });
 
 Route::get('/psychology', function () {
-    return view('psychology');
+    return view('psychology', [
+        'inventoryItems' => Inventory::where('available', true)->get()
+    ]);
 });
 
 Route::get('/economic', function () {
-    return view('economic');
+    return view('economic', [
+        'inventoryItems' => Inventory::where('available', true)->get()
+    ]);
 });
 
 Route::get('/english', function () {
-    return view('english');
+    return view('english', [
+        'inventoryItems' => Inventory::where('available', true)->get()
+    ]);
 });
 
 Route::get('/marketing', function () {
-    return view('marketing');
+    return view('marketing', [
+        'inventoryItems' => Inventory::where('available', true)->get()
+    ]);
 });
 
 Route::get('/email', function () {
     return view('email');
 });
+
+Route::get('/email', function () {
+    return view('email');
+});
+
+Route::get('/perfil', function () {
+    return view('perfil');
+});
+
+
