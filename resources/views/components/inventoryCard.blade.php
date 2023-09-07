@@ -10,17 +10,33 @@
         <div class="card-body p-4">
             <div class="text-center">
                 <!-- Product name-->
-                <h5  class="fw-bolder">{{ $name }}</h5>
+                <h5 class="fw-bolder">{{ $name }}</h5>
                 <!-- Product reviews-->
 
                 <!-- Product price-->
-                {{ $price }}
+
+                    Published by:
+                {{ $publisher }}
+
+                <div>
+                    Price: {{ $price }}
+                </div>
+
+                <div>
+                    Edition: {{ $edition }}
+                </div>
+
+                <div>
+                    Date: {{ $date }}
+                </div>
+
             </div>
         </div>
         <!-- Product actions-->
         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
-                    cart</a></div>
+            <div class="text-center">
+                <a class="btn btn-outline-dark mt-auto" href="/bookdescription">More detail</a>
+            </div>
         </div>
     </div>
 </div>

@@ -15,7 +15,7 @@
                     </button>
                 </div>
 
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item mx-5">
                             <x-nav.navlink label="Home" href="/" />
@@ -29,7 +29,7 @@
                             @endguest
                         </li>
                         <li class="nav-item mx-5">
-                            <x-nav.navlink label="Sign up" href="/signup" />
+                            <x-nav.navlink label="Perfil" href="/perfil" />
                         </li>
                         <li>
                             @auth
@@ -41,6 +41,14 @@
                             </li>
                         @endauth
                         </li>
+
+
+                        <li class="nav-item mx-5">
+                            <div class="text-center">
+                                <a class="btn btn-outline-dark mt-auto" href="/registerBook">Upload</a>
+                            </div>
+                        </li>
+
                     </ul>
 
                 </div>

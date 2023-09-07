@@ -1,3 +1,10 @@
+
+<x-nav.navbar/>
+
+<br>
+<br>
+<br>
+
 <x-layout>
 
 <style>
@@ -32,7 +39,7 @@
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                 <label class="form-check-label" for="exampleCheck1">Information confirmation</label>
                             </div>
-                            <x-buttom type="submit" text="Next"/>
+                            <x-button label="Next" type="submit" text="Next"/>
                         </form>
                     </div>
                 </div>

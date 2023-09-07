@@ -475,12 +475,12 @@
                                     <textarea class="form-control" name="message" id="message" rows="4"></textarea>
                                 </div>
 
-                                <div class="mb-3">
-                                    <button type="submit" class=" btn btn-primary w-100 fs-5">Enviar Mensaje</button>
-                                </div>
-                            </form>
-                        </div>
+                    <div class="mb-3">
+                        <button type="submit" class=" btn btn-primary w-100 fs-5">Send message</button>
                     </div>
-                </div>
+                </form>
+
+            </div>
+        </section>
         </div>
 </x-layout>
