@@ -1,3 +1,10 @@
+
+<x-nav.navbar/>
+
+<br>
+<br>
+<br>
+
 <x-layout>
 
     <style>
@@ -27,15 +34,15 @@
                             <x-input label="Descripcion" Type="string" name="descripcion" />
 
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">available</label>
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                <label class="form-check-label" for="flexCheckboxDEfault1">available</label>
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">unavailable</label>
+                                <label class="form-check-label" for="flexCheckboxDEfault2">unavailable</label>
                             </div>
                             <div class="mt-2">
-                                <x-buttom type="submit" text="upload" />
+                                <x-button label="Unpload" type="submit" text="upload" />
                             </div>
                         </form>
 
