@@ -63,6 +63,8 @@
                 <p class="mt-5 fs-3 text-uppercase">
                     Generate more reading with our website!
                 </p>
+                <input class="form-control form-control-lg mt-5" id="rearch" type="text" placeholder="Buscar"
+                data-sb-validations="required,text" />
             </div>
         </div>
     </div>
