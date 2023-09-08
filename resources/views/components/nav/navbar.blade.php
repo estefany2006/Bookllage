@@ -24,12 +24,18 @@
                             <x-nav.navlink label="About us" href="#about_us" />
                         </li>
                         <li class="nav-item mx-5">
+                            <x-nav.navlink label="Our work" href="#our_work" />
+                        </li>
+                        <li class="nav-item mx-5">
                             @guest
                                 <x-nav.navlink label="Login" href="/login" />
                             @endguest
                         </li>
                         <li class="nav-item mx-5">
-                            <x-nav.navlink label="Perfil" href="/perfil" />
+                            <x-nav.navlink label="Porfile" href="/perfil" />
+                        </li>
+                        <li class="nav-item mx-5">
+                            <x-nav.navlink label="Contact us" href="#contact" />
                         </li>
                         <li>
                             @auth
@@ -41,7 +47,6 @@
                             </li>
                         @endauth
                         </li>
-
 
                         <li class="nav-item mx-5">
                             <div class="text-center">

@@ -347,7 +347,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="our-work" id="ourwork">
+                <div id="our_work" style="scroll-margin-top: 100px">
                     <h2 class="text-center my-5">Our work</h2>
                     <div class="row mx-auto my-5 our-work">
                         <div class="col-lg-6 col-md-12 col-sm-12">
@@ -437,7 +437,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="contact mt-5" id="contac">
+                <div id="contact" style="scroll-margin-top: 100px" class="mt-5">
                     <div class="d-flex justify-content-center position-relative">
                         <svg id="bg-contacto" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 1440 320">
