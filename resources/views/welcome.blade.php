@@ -125,7 +125,7 @@
     </style>
 
     <body>
-        <div class="overflow-x-hidden">
+        <div class="overflow-x-hidden" id="navbar">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="margin-top: 79.55px">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -278,77 +278,38 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
-                    <div class="col">
-                        <div class="mission">
-                            <img src="{{ asset('img/Mission2.jpg') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Mission</h5>
-                                <p class="card-text">Streamline the process of finding college books for students'
-                                    higher
-                                    education, encouraging the reuse of college book establishing a secure and
-                                    reliable
-                                    connection between college students, with the goal of reducing the financial
-                                    burden
-                                    on
-                                    college students at the same time. </p>
-                            </div>
+                <div class="row w-75 mx-auto my-5 universidades-fila container-fluid">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="{{ asset('img/mission.jpg') }}" alt="Dr.MatiasJoséDelgado" width="180c"
+                            height="160"></a>
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Mission</h3>
+                            <p class="px-4">Streamline the process of finding college books for students' higher
+                                education, encouraging the reuse of college book establishing a secure and reliable
+                                connection between college students, with the goal of reducing the financial burden on
+                                college students at the same time. </p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="vision">
-                            <img src="{{ asset('img/vision.jpg') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Vision</h5>
-                                <p class="card-text">Our vision is to reach the entire university community and be
-                                    the
-                                    first choice for university students seeking academic resources, becoming a
-                                    platform
-                                    recognized for the innovation and accessibility that "BOOKET" offers. We aspire
-                                    to
-                                    positively impact the lives of college students by facilitating their access to
-                                    the
-                                    material essential for academic success and learning. We want to be your
-                                    constant
-                                    support in your educational journey by providing you with the necessary tools to
-                                    achieve
-                                    your academic goals and enhance your learning experience. </p>
-                            </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <img src="{{ asset('img/vision.jpg') }}" alt="ues" width="180" height="160"></a>
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Vision</h3>
+                            <p class="px-4">Our vision is to reach the entire university community and be the first
+                                choice for university students seeking academic resources, becoming a platform
+                                recognized for the innovation and accessibility that "BOOKET" offers. We aspire to
+                                positively impact the lives of college students by facilitating their access to the
+                                material essential for academic success and learning. We want to be your constant
+                                support in your educational journey by providing you with the necessary tools to achieve
+                                your academic goals and enhance your learning experience.</p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="values">
-                            <img src="{{ asset('img/values.jpg') }}" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">values</h5>
-                                <ol class="list-group-numbered">
-                                    <li class="list-group-item">Innovation: we are promoting a solution using
-                                        technology,
-                                        with the purpose of effectively addressing the current challenges often
-                                        faced by
-                                        university students</li>
-                                    <li class="list-group-item">Overcoming: We wish to contribute to the field of
-                                        higher
-                                        education through the promotion of motivation</li>
-                                    <li class="list-group-item">Motivation: We aspire to incentivize to students to
-                                        push
-                                        them limits and reduce the incidence of university dropouts due to economic
-                                        constraints</li>
-                                    <li class="list-group-item">Security and confidence: Our goal is to ensure the
-                                        integrity of user data and build trust in our platform</li>
-                                    <li class="list-group-item">Quality: We are committed to offer products in good
-                                        condition and high-quality service on our platform</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div id="our_work" style="scroll-margin-top: 100px">
-                    <h2 class="text-center my-5">Our work</h2>
+                    <h2 class="tex-center my-5">Our work</h2>
                     <div class="row mx-auto my-5 our-work">
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <p>Welcome to our presentation on the exciting job of selling books! In this
@@ -436,51 +397,10 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                <div id="contact" style="scroll-margin-top: 100px" class="mt-5">
-                    <div class="d-flex justify-content-center position-relative">
-                        <svg id="bg-contacto" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1440 320">
-                            <path fill="#0099ff" fill-opacity="1"
-                                d="M0,96L120,122.7C240,149,480,203,720,186.7C960,171,1200,85,1320,42.7L1440,0L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-                            </path>
-                        </svg>
-                        <div class="container  border-top border-primary " style="max-width: 500px"
-                            id="contenedor-formulario">
-                            <div class="text-center mb-4" id="titulo-formulario">
-                                <div class="contenedor">
-                                    <img class="img-1" src="{{ asset('img/woman.png') }}" alt=""
-                                        class="img-fluid ps-5">
-                                    <img class="img-2" src="{{ asset('img/men.png') }}" alt=""
-                                        class="img-fluid ps-5">
-                                </div>
-                                <h2>Contact us</h2>
-                                <p class="fs-5">We are here to make your projects come true</p>
-                            </div>
-                            <form method="POST" data-netlify="true" action="#">
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" id="email" name="email"
-                                        placeholder="Name@example.com">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="input" class="form-control" id="name" name="name"
-                                        placeholder="John Doe">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control" name="phone" id="phone"
-                                        placeholder="Cell phone number">
-                                </div>
-
-                                <div class="mb-3">
-                                    <textarea class="form-control" name="message" id="message" rows="4"></textarea>
-                                </div>
-
-                    <div class="mb-3">
-                        <button type="submit" class=" btn btn-primary w-100 fs-5">Send message</button>
-                    </div>
-                </form>
-
             </div>
-        </section>
-        </div>
+            <footer class="py-5" style="background-color: #3D3B94">
+                <div class="container">
+                    <p class="m-0 text-center text-white">Booket &copy; 2023</p>
+                </div>
+            </footer>
 </x-layout>
