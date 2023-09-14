@@ -301,12 +301,49 @@
                                 choice for university students seeking academic resources, becoming a platform
                                 recognized for the innovation and accessibility that "BOOKET" offers. We aspire to
                                 positively impact the lives of college students by facilitating their access to the
-                                material essential for academic success and learning. We want to be your constant
-                                support in your educational journey by providing you with the necessary tools to achieve
-                                your academic goals and enhance your learning experience.</p>
+                                material essential for academic success and learning.</p>
                         </div>
                     </div>
-                    
+                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                        <img src="{{ asset('img/inovation.jpg') }}" alt="Inovation" width="180c"
+                            height="160"></a>
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Inovation</h3>
+                            <p class="px-4">we are promoting a solution using technology, with the purpose of
+                                effectively addressing the current challenges often faced by university students.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                        <img src="{{ asset('img/motivation.jpg') }}" alt="Motivation" width="180"
+                            height="160"></a>
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Motivation</h3>
+                            <p class="px-4">We aspire to incentivize to students to push them limits and reduce the incidence of university dropouts due to economic constraints.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                        <img src="{{ asset('img/overcoming.jpg') }}" alt="Ovecomming" width="180c"
+                            height="160"></a>
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Overcoming</h3>
+                            <p class="px-4">We wish to contribute to the field of higher education through the promotion of motivation.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                        <img src="{{ asset('img/Quality.jpg') }}" alt="Quality" width="180" height="160"></a>
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Quality</h3>
+                            <p class="px-4">We are committed to offer products in good condition and high-quality service on our platform.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                        <img src="{{ asset('img/Security.jpg') }}" alt="Security" width="180c"
+                            height="160"></a>
+                        <div>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Security and confidence</h3>
+                            <p class="px-4">Our goal is to ensure the integrity of user data and build trust in our platform.</p>
+                        </div>
+                    </div>
                 </div>
                 <div id="our_work" style="scroll-margin-top: 100px">
                     <h2 class="tex-center my-5">Our work</h2>
