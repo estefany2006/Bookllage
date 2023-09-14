@@ -141,9 +141,9 @@
                         <img src="{{ asset('img/img-1.jpg') }}" class="d-block w-100 d-img" alt="slider 1">
                         <div class="carousel-caption top-0 mt-4">
                             <p class="mt-5 fs-3 text-uppercase">
-                                Let's give books
+                                
                             </p>
-                            <h1 class="display-1 fw-bolder text-capitalize">second chance</h1>
+                            <h1 class="display-1 fw-bolder text-capitalize">Welcome to BOOKET!</h1>
                             <a href="/login" class="btn btn-primary">Get started</a>
                         </div>
                     </div>
@@ -152,9 +152,9 @@
                         <img src="{{ asset('img/img-2.jpg') }}" class="d-block w-100 d-img" alt="slider 1">
                         <div class="carousel-caption top-0 mt-4">
                             <p class="mt-5 fs-3 text-uppercase">
-                                Let's give books
+
                             </p>
-                            <h1 class="display-1 fw-bolder text-capitalize">second chance</h1>
+                            <h1 class="display-1 fw-bolder text-capitalize">Welcome to BOOKET!</h1>
                             <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Get strated</button>
                         </div>
                     </div>
@@ -163,9 +163,9 @@
                         <img src="{{ asset('img/img-3.jpg') }}" class="d-block w-100 d-img" alt="slider 1">
                         <div class="carousel-caption top-0 mt-4">
                             <p class="mt-5 fs-3 text-uppercase">
-                                Let's give books
+
                             </p>
-                            <h1 class="display-1 fw-bolder text-capitalize">second chance</h1>
+                            <h1 class="display-1 fw-bolder text-capitalize">Welcome to BOOKET!</h1>
                             <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Get strated</button>
                         </div>
                     </div>
@@ -189,16 +189,13 @@
 
                 <div class="row mx-auto my-5 align-items-center">
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <p>Welcome we are booket. Your online literary destination where the magic of words comes to
-                            life. In an increasingly digitized world, we continue to believe in the power of books
-                            to
-                            transport us to unknown worlds, broaden our horizons and nourish our minds. Let us bring
-                            your passion for reading directly into your hands, offering you a wide selection of
-                            titles
-                            spanning genres, eras and cultures.
-                        <p> Imagine a place where you can generate profits where you can find all kinds of
-                            categories of
-                            college books. Our website offers you all this among other things. </p>
+                        <p style="text-align: justify; font-size: 120%">
+                            BOOKET is a platform to find university books in a simple and fast way.
+                            We are a team committed to education and believe in the importance of
+                            learning. Imagine a space where you can get advantages and access to a
+                            wide range of categories of university books. Our platform provides you
+                            with all this, among other benefits. Join us in our mission to promote
+                            education and help each other grow as learners and lovers of knowledge.
                         </p>
                     </div>
                     <div class="col-6 my-5s">
@@ -212,69 +209,67 @@
 
                     <div class="row mx-auto my-5 align-items-center">
                         <div class="col-lg-6 col-md-12 col-sm-12">
-                            <p>We are a team that was born in the years of 2023, We are students of Centro Superate
-                                Fundación Poma We are currently Junior, Promotion 2024. Shaped by five young people.
-                            </p>
-                            <p class="my-5">Welcome to our book store! We are Booket, a group of young people eager to
-                                facilitate the discovery of university books and entertainment, passionately dedicated
-                                to
-                                providing you with an exceptional experience in the world of literature. From timeless
-                                classics to the latest novelties, our collection has been handpicked to satisfy the
-                                tastes
-                                of avid readers like you. We pride ourselves on being more than just booksellers; We are
-                                lovers of stories, advocates of education and believers in the transformative power of
-                                the
-                                printed word. Our mission is to provide a haven for book lovers, where they can explore
-                                new
-                                worlds, meet fascinating characters, and become immersed in captivating narratives.
+                            <p style="font-size: 120%; text-align:justify">
+                                In the exciting year 2023, five young students from ¡Supérate!Fundación Poma
+                                came together to bring BOOKET to life. We are focused on facilitating the search for
+                                college books by providing an intuitive and efficient online platform. We pride
+                                ourselves on being passionate advocates of education and firm believers in the
+                                transformative power of learning. We are committed to giving the books you no longer
+                                need another opportunity to serve the college community.
                             </p>
                         </div>
                         <div class="col-6">
                             <img class="img-fluid rounded" src="{{ asset('img/aboutus.jpg') }}" alt="Aboutus">
                         </div>
                         <div class="row row-cols-3 g-4 justify-content-center mt-5">
-                            <div class="col">
-                                <div>
-                                    <img src="{{ asset('img/Tatiana.jpg') }}" class="card-img-top" alt="Estefany">
-                                    <div class="card-body">
+                            <div class="col-4">
+                                <img src="{{ asset('img/Tatiana.jpg') }}"
+                                    class="card-img-top d-flex justify-content-center" alt="Estefany" style="}">
+
+                                    <div class="card-body mt-3 text-center">
                                         <h5 class="card-title">Estefany Mancia</h5>
-                                        <p class="card-text">She is currently specialized in the Marketing part.</p>
+                                        <p class="card-text">Marketing area.</p>
                                     </div>
-                                </div>
+
                             </div>
                             <div class="col">
                                 <div>
-                                    <img src="{{ asset('img/Kelvin.jpg') }}" class="card-img-top" alt="Estefany">
-                                    <div class="card-body">
+                                    <img src="{{ asset('img/Kelvin.jpg') }}"
+                                     class="card-img-top d-flex justify-content-center" alt="Estefany">
+
+                                    <div class="card-body mt-3 text-center">
                                         <h5 class="card-title">Kelvin Gamez</h5>
-                                        <p class="card-text">He is currently specialized in the Back-end part.</p>
+                                        <p class="card-text">Back-end area.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
-                                    <img src="{{ asset('img/Diana.jpg') }}" class="card-img-top" alt="Estefany">
-                                    <div class="card-body">
+                                    <img src="{{ asset('img/Diana.jpg') }}"
+                                    class="card-img-top d-flex justify-content-center" alt="Estefany">
+                                    <div class="card-body mt-3 text-center">
                                         <h5 class="card-title">Diana Pérez</h5>
-                                        <p class="card-text">She is currently specialized the Font-end part.</p>
+                                        <p class="card-text">Front-end area.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
-                                    <img src="{{ asset('img/Anibal.jpg') }}" class="card-img-top" alt="Estefany">
-                                    <div class="card-body">
+                                    <img src="{{ asset('img/Anibal.jpg') }}"
+                                    class="card-img-top d-flex justify-content-center" alt="Estefany">
+                                    <div class="card-body mt-3 text-center">
                                         <h5 class="card-title">Anibal Mendez</h5>
-                                        <p class="card-text">He is currently specialized in the Back-end part.</p>
+                                        <p class="card-text">Back-end area.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
                                 <div>
-                                    <img src="{{ asset('img/Yamileth.png') }}" class="card-img-top" alt="Estefany">
-                                    <div class="card-body">
+                                    <img src="{{ asset('img/Yamileth.png') }}"
+                                     class="card-img-top d-flex justify-content-center" alt="Estefany">
+                                    <div class="card-body mt-3 text-center">
                                         <h5 class="card-title">Ana Garcia</h5>
-                                        <p class="card-text">She is currently specialized in the Fond-end part.</p>
+                                        <p class="card-text">Front-end area.</p>
                                     </div>
                                 </div>
                             </div>
@@ -306,40 +301,24 @@
                                 your academic goals and enhance your learning experience.</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div id="our_work" style="scroll-margin-top: 100px">
                     <h2 class="tex-center my-5">Our work</h2>
                     <div class="row mx-auto my-5 our-work">
                         <div class="col-lg-6 col-md-12 col-sm-12">
-                            <p>Welcome to our presentation on the exciting job of selling books! In this
-                                project, we will
-                                explore the exciting world of bookselling, examining how bookselling is not only a
-                                profitable business, but also a window into knowledge, culture, and imagination. As
-                                we
-                                go
-                                forward we will know all the categories that our website offers. We are in a world
-                                where
-                                this constant evolution, where technology is transforming the way we access
-                                information,
-                                the
-                                act of selling books continues to be a tangible and powerful way to share ideas and
-                                foster
-                                learning.
-                            <p> In this paper, we'll explore how to carefully select a variety of titles to meet our
-                                customers' tastes and needs, how to create enriching experiences in our store
-                                (whether
-                                physical or online), and how to use marketing strategies to reach a broader
-                                audience. .
-                                We
-                                will also highlight the intrinsic value of books as vehicles for learning,
-                                entertainment,
-                                and personal growth. We will explore how our efforts translate not only into
-                                business
-                                transactions, but also in fostering a more educated, informed, and thoughtful
-                                society.
-                                So
-                                join us on this journey through books. </p>
+                            <p style="font-size: 120%; text-align:justify">
+                                At BOOKET, our passion is education and accessibility
+                                to knowledge. We are proud to offer an online platform
+                                that simplifies the search for college books, providing
+                                students and lovers of learning a space where they can
+                                access a wide variety of academic book categories. But
+                                our work goes beyond being a search platform; we are
+                                agents of change in the educational community. Every book
+                                you find on BOOKET represents a second chance to inspire
+                                others and expand the horizon of knowledge. We are committed
+                                to fostering equal educational opportunities and contributing to
+                                the empowerment of students everywhere.
                             </p>
                         </div>
                         <div class="col-6">
