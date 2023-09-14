@@ -1,5 +1,3 @@
-<x-layout>
-
     <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
@@ -17,42 +15,33 @@
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item mx-5">
-                            <x-nav.navlink label="Home" href="/" />
-                        </li>
-                        <li class="nav-item mx-5">
-                            <x-nav.navlink label="About us" href="#about_us" />
-                        </li>
-                        <li class="nav-item mx-5">
-                            <x-nav.navlink label="Our work" href="#our_work" />
-                        </li>
-                        <li class="nav-item mx-5">
-                            @guest
-                                <x-nav.navlink label="Login" href="/login" />
-                            @endguest
-                        </li>
-                        <li class="nav-item mx-5">
-                            <x-nav.navlink label="Porfile" href="/perfil" />
-                        </li>
-                        <li class="nav-item mx-5">
-                            <x-nav.navlink label="Contact us" href="#contact" />
-                        </li>
-                        <li>
+
+                        <x-nav.navlink label="Home" href="/" />
+
+                        <x-nav.navlink label="About us" href="/#about_us" />
+
+                        @guest
+                            <x-nav.navlink label="Login" href="/login" />
+                        @endguest
+
+                        <x-nav.navlink label="Porfile" href="/perfil" />
+
+
                             @auth
-                            <li class="nav-item mx-5">
+                            <li class="nav-item mx-4">
                                 <form action="/logout" method="POST">
                                     @csrf
                                     <button class="nav-link">Log out</button>
                                 </form>
                             </li>
-                        @endauth
-                        </li>
+                            </li>
 
-                        <li class="nav-item mx-5">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="/registerBook">Upload</a>
-                            </div>
-                        </li>
+                            <li class="nav-item mx-4">
+                                <div class="text-center">
+                                    <a class="btn btn-outline-dark mt-auto" href="/registerBook">Upload</a>
+                                </div>
+                            </li>
+                        @endauth
 
                     </ul>
 
@@ -61,5 +50,3 @@
         </nav>
 
     </div>
-
-</x-layout>

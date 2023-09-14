@@ -110,7 +110,7 @@ Copiar esto
         }
 
         .seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
-           
+
             left: -2px;
             top: -2px;
             border: 0;
@@ -201,7 +201,7 @@ Copiar esto
                 @auth
                 <h3>{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</h3>
 
-                <p class="texto">Hola, soy {{ auth()->user()->first_name }}, espero que mis libros les sean de ayuda.</p>
+                <p class="texto">Hello, I'm {{ auth()->user()->first_name }}, I hope my books will be of help to you.</p>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
@@ -212,12 +212,12 @@ Copiar esto
                         <p>University: {{ auth()->user()->university }}</p>
                     </li>
                     <li><i></i>
-                        <p>Publicaciones: </p>
+                        <p></p>
                     </li>
                 </ul>
             </div>
             @else
-                <p>Debes iniciar sesión para ver tu perfil.</p>
+                <p>You must be logged in to view your profile.</p>
             @endauth
         </div>
 

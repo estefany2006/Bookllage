@@ -84,20 +84,20 @@ button i.fas {
 
     <form>
         <div class="container">
-            <h2>Contacto</h2>
+            <h2>Contact</h2>
             <form id="contactForm">
-                <label for="nombre">Nombre:</label>
+                <label for="nombre">Name:</label>
                 <input type="text" id="nombre" name="nombre" required><br><br>
-                <label for="correo">Correo electrónico:</label>
+                <label for="correo">Email:</label>
                 <input type="email" id="correo" name="correo" required><br><br>
 
-                <label for="mensaje">Mensaje:</label><br>
+                <label for="mensaje">Message:</label><br>
                 <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
 
 
 
 
-                <button type="button" id="btnContactar">Contactar</button>
+                <button type="button" id="btnContactar">Contact</button>
         </div>
     </form>
 

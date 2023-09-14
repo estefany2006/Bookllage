@@ -19,6 +19,7 @@
 </head>
 
 <body class="text-dark bg-opacity-50">
+    <x-nav.navbar/>
     {{ $slot }}
     @stack('js')
 </body>

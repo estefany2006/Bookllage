@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Department;
+use App\Models\District;
+use App\Models\Municipality;
 use App\Models\University;
 use App\Models\User;
 use App\Models\Book;
@@ -97,7 +101,11 @@ Route::post('/signup', function () {
 });
 
 Route::get('/registerBook', function () {
-    return view('registerBook');
+    return view('registerBook', [
+        'categories' => Category::all(),
+        'books' => Book::all(),
+
+    ]);
 });
 
 Route::post('/registerBook', function () {
@@ -107,11 +115,11 @@ Route::post('/registerBook', function () {
         'publisher' => 'required|string|max:255',
         'edition' => 'required|string|max:255',
         'date' => 'required|date',
+        'category_id' => 'required'
     ]);
 
-
     if ($book = Book::create($atributtes)) {
-        return redirect('bookTransaction') - with($book);
+        return redirect('bookTransaction')->with('book', $book);
     };
 
     return back()->withErrors([
@@ -119,8 +127,29 @@ Route::post('/registerBook', function () {
     ]);
 });
 
+Route::post('selectBook', function () {
+
+    $atributtes = request()->validate([
+        'book' => 'required'
+    ]);
+
+    if($atributtes['book'] != 'Select the book') {
+        return redirect('bookTransaction')->with('book', Book::where('id', $atributtes['book'])->first());
+    };
+
+    return back()->withErrors([
+        'book' => 'Select the book'
+    ]);
+
+});
+
 Route::get('/bookTransaction', function () {
-    return view('bookTransaction');
+    return view('bookTransaction', [
+        'book' =>  Session::get('book'),
+        'departments' =>  Department::all(),
+        'municipalities' =>  Municipality::all(),
+        'districts' =>  District::all()
+    ]);
 });
 
 Route::get('/categories', function () {
