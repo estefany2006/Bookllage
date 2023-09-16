@@ -36,8 +36,8 @@ Route::get('/categories', function () {
 })->middleware(['auth']);
 
 
-Route::get('/bookDescription', function () {
-    return view('bookDescription');
+Route::get('/bookdescription', function () {
+    return view('bookdescription');
 });
 
 Route::get('/login', function () {
