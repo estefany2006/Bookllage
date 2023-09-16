@@ -130,10 +130,10 @@
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"
+                        aria-label="true"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="active"
+                        aria-label="true"></button>
                 </div>
 
                 <div class="carousel-inner" style="height: calc(100vh - 80px)">
@@ -144,7 +144,7 @@
 
                             </p>
                             <h1 class="display-1 fw-bolder text-capitalize">Welcome to BOOKET!</h1>
-                            <a href="/login" class="btn btn-primary">Get started</a>
+                            <a href="/login" class="btn btn-primary px-4 py-2 fs-5 mt-5">Get started</a>
                         </div>
                     </div>
 
@@ -155,7 +155,7 @@
 
                             </p>
                             <h1 class="display-1 fw-bolder text-capitalize">Welcome to BOOKET!</h1>
-                            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Get strated</button>
+                            <a href="/login" class="btn btn-primary px-4 py-2 fs-5 mt-5">Get started</a>
                         </div>
                     </div>
 
@@ -166,7 +166,7 @@
 
                             </p>
                             <h1 class="display-1 fw-bolder text-capitalize">Welcome to BOOKET!</h1>
-                            <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Get strated</button>
+                            <a href="/login" class="btn btn-primary px-4 py-2 fs-5 mt-5">Get started</a>
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                             education and help each other grow as learners and lovers of knowledge.
                         </p>
                     </div>
-                    <div class="col-6 my-5s">
+                    <div class="col-12 col-md-4">
                         <img class="img-fluid rounded" src="{{ asset('img/logo.png') }}" alt="nosotros1">
                     </div>
                 </div>
@@ -206,7 +206,6 @@
 
                 <div id="about_us" style="scroll-margin-top: 100px">
                     <h2 class="text-center my-5">About us</h2>
-
                     <div class="row mx-auto my-5 align-items-center">
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <p style="font-size: 120%; text-align:justify">
@@ -218,11 +217,11 @@
                                 need another opportunity to serve the college community.
                             </p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-4">
                             <img class="img-fluid rounded" src="{{ asset('img/aboutus.jpg') }}" alt="Aboutus">
                         </div>
                         <div class="row row-cols-3 g-4 justify-content-center mt-5">
-                            <div class="col-4">
+                            <div class="col-12 col-md-4">
                                 <img src="{{ asset('img/Tatiana.jpg') }}"
                                     class="card-img-top d-flex justify-content-center" alt="Estefany" style="}">
 
@@ -232,7 +231,7 @@
                                     </div>
 
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md-4">
                                 <div>
                                     <img src="{{ asset('img/Kelvin.jpg') }}"
                                      class="card-img-top d-flex justify-content-center" alt="Estefany">
@@ -243,7 +242,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md-4">
                                 <div>
                                     <img src="{{ asset('img/Diana.jpg') }}"
                                     class="card-img-top d-flex justify-content-center" alt="Estefany">
@@ -253,7 +252,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md-4">
                                 <div>
                                     <img src="{{ asset('img/Anibal.jpg') }}"
                                     class="card-img-top d-flex justify-content-center" alt="Estefany">
@@ -263,7 +262,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
+                            <div class="col-12 col-md-4">
                                 <div>
                                     <img src="{{ asset('img/Yamileth.png') }}"
                                      class="card-img-top d-flex justify-content-center" alt="Estefany">
@@ -331,7 +330,7 @@
                             <p class="px-4">We are committed to offer products in good condition and high-quality service on our platform.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                    <div class="offset-lg-3 col-lg-6 col-md-12 col-sm-12 mt-3">
                         <img src="{{ asset('img/Security.jpg') }}" alt="Security" width="180c"
                             height="160"></a>
                         <div>
@@ -341,9 +340,11 @@
                     </div>
 
                 </div>
+                <div>
+                </div >
                 <div id="our_work" style="scroll-margin-top: 100px">
-                    <h2 class="tex-center my-5">Our work</h2>
-                    <div class="row mx-auto my-5 our-work">
+                    <h2 class="text-center my-5">Our work</h2>
+                    <div class="row mx-auto my-5 align-items-center">
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <p style="font-size: 120%; text-align:justify">
                                 At BOOKET, our passion is education and accessibility
@@ -359,7 +360,7 @@
                                 the empowerment of students everywhere.
                             </p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-4">
                             <img class="img-fluid rounded" src="{{ asset('img/us.jpg') }}" alt="Ourwork">
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 
     <style>
         body {
-            background-color: rgb(191, 196, 241);
+            background-color: #919CD9;
         }
 
         #form {
@@ -25,7 +25,7 @@
         }
 
         label {
-            color: grey;
+            color: black;
         }
 
         .clasificacion {
@@ -51,7 +51,7 @@
     <div
         style="margin-top: 5%; margin-bottom:5%; margin-left: 5%; margin-right:5%; font-family:Arial, Helvetica, sans-serif">
         <div
-            class="p-3 mb-2 bg-primary-subtle text-emphasis-secondary row align-items-center container text-center mx-auto my-auto rounded ">
+            class="p-3 mb-2 text-emphasis-secondary row align-items-center container text-center mx-auto my-auto rounded" style="background: #C4D4F2">
             <div class="col ">
                 <div class="p-3 mb-2 bg-body text-body rounded" style="margin-top: 5%; margin-bottom:5%">
                     <h6 style="text-align: left">Engineering</h6>
@@ -87,7 +87,7 @@
                     <div class="row">
                         <div class="col-6" style="margin-top:5%; margin-bottom:5% ">
                             <img src="{{ asset('images/Libro _ecografia_musculoesqueletica.jpg') }}" class="img-fluid"
-                                align="right" width="200" height="100" alt="" srcset="">
+                                aligin="right" width="200" height="100" alt="" srcset="">
                         </div>
                         <div class="col-6 text-center" style="margin-bottom:5%">
                             <h6 class="text-h1">Price:</h6>
@@ -103,6 +103,7 @@
                             <h5>10 de agosto de 2020</h5>
                             <h5>
 
+                
                                 <x-nav.navlink label="contac" href="/email" />
 
 
