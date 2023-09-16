@@ -1,4 +1,4 @@
-@props(['name', 'publisher', 'price', 'edition', 'date'])
+@props(['name', 'publisher', 'price' => 0.0, 'edition', 'date', 'isTransaction' => true])
 
 <div class="col mb-5">
     <div class="card h-100">
@@ -15,7 +15,7 @@
 
                 <!-- Product price-->
 
-                    Published by:
+                Published by:
                 {{ $publisher }}
 
                 <div>
@@ -33,10 +33,14 @@
             </div>
         </div>
         <!-- Product actions-->
-        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center">
-                <a class="btn btn-outline-dark mt-auto" href="/bookdescription">More detail</a>
+
+        @if ($isTransaction)
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                    <a class="btn btn-outline-dark mt-auto" href="/bookdescription">More detail</a>
+                </div>
             </div>
-        </div>
+        @endif
+
     </div>
 </div>

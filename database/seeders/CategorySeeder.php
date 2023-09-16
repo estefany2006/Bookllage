@@ -13,6 +13,20 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::factory(5)->create();
+
+        $categories = collect(
+            [
+                'Computer Engineering',
+                'Medicine',
+                'Psychology',
+                'Economic',
+                'English',
+                'Marketing and Communications',
+            ]
+        );
+
+        Category::factory(count($categories))->sequence(fn($sequence) => [
+            'name' => $categories[$sequence->index]
+        ])->create();
     }
 }
