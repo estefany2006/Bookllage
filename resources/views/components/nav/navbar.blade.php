@@ -24,7 +24,7 @@
                             <x-nav.navlink label="Login" href="/login" />
                         @endguest
 
-                        <x-nav.navlink label="Porfile" href="/perfil" />
+                        <x-nav.navlink label="Profile" href="/perfil" />
 
 
                             @auth
