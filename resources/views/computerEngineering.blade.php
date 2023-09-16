@@ -1,6 +1,5 @@
 <x-layout>
 
-    <x-nav.navbar />
 
     <div class="overflow-x-hidden">
         <header class="bg-dark py-5">

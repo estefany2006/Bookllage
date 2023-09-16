@@ -1,11 +1,5 @@
 <x-layout>
 
-    <x-nav.navbar />
-
-    <br>
-    <br>
-    <br>
-
     <div class="overflow-x-hidden">
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
