@@ -24,16 +24,15 @@
                 <div class="form-box px-5 py-4">
                     <div class="register p-3 mb-2 ">
 
-                        <h2 class="text-center mb-4" style="color: #FFFFFF;">Make sure that the book is already registered</h2>
-                        <form action="selectBook" method="POST">
+                        <h2 class="text-center mb-4">Make sure that the book is already registered</h2>
+                        <form x-data="{book_id: 0}" @submit.prevent="window.location.href = `/bookTransaction/${book_id}`">
                             @csrf
-                            <select class="form-select" aria-label="Default select example" name="book">
+                            <select class="form-select" aria-label="Default select example" name="book" x-model="book_id">
                                 <option selected>Select the book</option>
                                 @foreach ($books as $book)
                                     <option value="{{ $book->id }}">{{ $book->name }}</option>
                                 @endforeach
                             </select>
-
                             <x-button label="Add more information" type="submit" text="Next" />
                         </form>
                     </div>

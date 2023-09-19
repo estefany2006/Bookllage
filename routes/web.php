@@ -104,7 +104,6 @@ Route::get('/registerBook', function () {
     return view('registerBook', [
         'categories' => Category::all(),
         'books' => Book::all(),
-
     ]);
 });
 
@@ -127,25 +126,9 @@ Route::post('/registerBook', function () {
     ]);
 });
 
-Route::post('selectBook', function () {
-
-    $atributtes = request()->validate([
-        'book' => 'required'
-    ]);
-
-    if($atributtes['book'] != 'Select the book') {
-        return redirect('bookTransaction')->with('book', Book::where('id', $atributtes['book'])->first());
-    };
-
-    return back()->withErrors([
-        'book' => 'Select the book'
-    ]);
-
-});
-
-Route::get('/bookTransaction', function () {
+Route::get('/bookTransaction/{book}', function (Book $book) {
     return view('bookTransaction', [
-        'book' =>  Session::get('book'),
+        'book' =>  $book,
         'departments' =>  Department::all(),
         'municipalities' =>  Municipality::all(),
         'districts' =>  District::all()

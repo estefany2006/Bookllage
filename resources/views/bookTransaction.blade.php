@@ -18,80 +18,67 @@
     </style>
 
     <section class="main" style="margin-top: 80px">
-        <div class="container">
+        <div class="container pt-4">
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-3">
                     <x-inventoryCard name=" {{ $book->name }} " publisher="{{ $book->publisher }}"
-                        edition=" {{ $book->price }}" date=" {{ $book->date }}" />
+                                     edition=" {{ $book->price }}" date=" {{ $book->date }}"
+                                     isTransaction="{{ false }}"/>
                 </div>
 
                 <div class="col-9">
-                    <div class="form-box px-5 py-4">
-                        <div class="register p-3 mb-2">
-                            <h5 class="text-center mb-4" style="color: #FFFFFF;">Add the transaction details</h5>
-                            <p style="color: #FFFFFF;">and publish your book</p>
+                    <div class="form-box ps-5">
+                        <div class="register px-4 py-5 mb-2">
+                            <h5 class="text-center title" style="color: #FFFFFF;">Add the transaction details</h5>
+                            <p style="color: #FFFFFF;" class="mb-5">and publish your book</p>
                             <form action="/signup" method="POST">
                                 @csrf
 
-                                <x-input label="Image" Type="file" name="image" />
+                                <x-input label="Image" Type="file" name="image"/>
 
-                                <select class="form-select" aria-label="Default select example" name="Address">
+                                <select class="form-select" aria-label="Default select example" name="department">
                                     <option selected>Department</option>
                                     @foreach ($departments as $department)
                                         <option value="{{ $department->id }}">{{ $department->name }}</option>
                                     @endforeach
                                 </select>
 
-                                <br>
-
-                                <select class="form-select" aria-label="Default select example" name="Address">
+                                <select class="form-select mt-3" aria-label="Default select example" name="municipality">
                                     <option selected>Municipality</option>
                                     @foreach ($municipalities as $municipality)
                                         <option value="{{ $municipality->id }}">{{ $municipality->name }}</option>
                                     @endforeach
                                 </select>
 
-                                <br>
-
-                                <select class="form-select" aria-label="Default select example" name="Address">
+                                <select class="form-select mt-3" aria-label="Default select example" name="district">
                                     <option selected>District</option>
                                     @foreach ($districts as $district)
                                         <option value="{{ $district->id }}">{{ $district->name }}</option>
                                     @endforeach
                                 </select>
 
-                                <br>
-
-                                <x-input label="Price" Type="number" step="0.01" name="price" />
-
-                                <div class="input-group mb-3" Type="number" name="price">
-                                    <span class="input-group-text">$</span>
-                                    <span class="input-group-text">0.00</span>
-                                    <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-                                  </div>
-
-                                <x-input label="Descripcion" Type="string" name="descripcion" />
-
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
-                                    <label class="form-check-label" for="flexCheckboxDEfault1">available</label>
+                                <div class="mt-3">
+                                    <x-input label="Price" Type="number" step="0.01" name="price"/>
                                 </div>
-                                <div class="form-check">
+
+                                <x-input label="Description" Type="string" name="descripcion"/>
+
+                                <div class="form-check text-start">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                    <label class="form-check-label" for="flexCheckboxDEfault1">Available</label>
+                                </div>
+                                <div class="form-check text-start">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="flexCheckboxDEfault2">unavailable</label>
+                                    <label class="form-check-label" for="flexCheckboxDEfault2">Unavailable</label>
                                 </div>
                                 <div class="mt-2">
-                                    <x-button label="Unpload" type="submit" text="upload" />
+                                    <x-button label="Upload" type="submit" text="upload"/>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
         </div>
     </section>
 </x-layout>

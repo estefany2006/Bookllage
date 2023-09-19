@@ -1,7 +1,5 @@
 <x-layout>
-
     <x-nav.navbar />
-
 
     <style>
         .d-item {
@@ -185,10 +183,8 @@
             </button>
 
             <div class="container">
-
-
                 <div class="row mx-auto my-5 align-items-center">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="col-lg-7 col-md-12 col-sm-12">
                         <p style="text-align: justify; font-size: 120%">
                             BOOKET is a platform to find university books in a simple and fast way.
                             We are a team committed to education and believe in the importance of
@@ -198,16 +194,16 @@
                             education and help each other grow as learners and lovers of knowledge.
                         </p>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-4 offset-1">
                         <img class="img-fluid rounded" src="{{ asset('img/logo.png') }}" alt="nosotros1">
                     </div>
                 </div>
 
 
                 <div id="about_us" style="scroll-margin-top: 100px">
-                    <h2 class="text-center my-5">About us</h2>
+                    <h2 class="text-center my-5 title">About us</h2>
                     <div class="row mx-auto my-5 align-items-center">
-                        <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="col-lg-7 col-md-12 col-sm-12">
                             <p style="font-size: 120%; text-align:justify">
                                 In the exciting year 2023, five young students from ¡Supérate!Fundación Poma
                                 came together to bring BOOKET to life. We are focused on facilitating the search for
@@ -217,7 +213,7 @@
                                 need another opportunity to serve the college community.
                             </p>
                         </div>
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-md-4 offset-md-1">
                             <img class="img-fluid rounded" src="{{ asset('img/aboutus.jpg') }}" alt="Aboutus">
                         </div>
                         <div class="row row-cols-3 g-4 justify-content-center mt-5">
@@ -275,7 +271,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="row w-75 mx-auto my-5 universidades-fila container-fluid">
+                <div class="row mx-auto my-5 universidades-fila container-fluid justify-content-center">
+                    <hr>
+                    <div class="col-12 my-5">
+                        <h1 class="title">Our purpose</h1>
+                    </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <img src="{{ asset('img/mission.jpg') }}" alt="Dr.MatiasJoséDelgado" width="180c"
                             height="160"></a>
@@ -298,16 +298,20 @@
                                 material essential for academic success and learning.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                    <hr class="my-5">
+                    <div class="col-12 my-5">
+                        <h1 class="title">Our values</h1>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
                         <img src="{{ asset('img/inovation.jpg') }}" alt="Inovation" width="180c"
                             height="160"></a>
                         <div>
-                            <h3 class="fs-5 mt-4 px-4 pb-1">Inovation</h3>
+                            <h3 class="fs-5 mt-4 px-4 pb-1">Innovation</h3>
                             <p class="px-4">we are promoting a solution using technology, with the purpose of
                                 effectively addressing the current challenges often faced by university students.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                    <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
                         <img src="{{ asset('img/motivation.jpg') }}" alt="Motivation" width="180"
                             height="160"></a>
                         <div>
@@ -315,7 +319,7 @@
                             <p class="px-4">We aspire to incentivize to students to push them limits and reduce the incidence of university dropouts due to economic constraints.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                    <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
                         <img src="{{ asset('img/overcoming.jpg') }}" alt="Ovecomming" width="180c"
                             height="160"></a>
                         <div>
@@ -323,14 +327,14 @@
                             <p class="px-4">We wish to contribute to the field of higher education through the promotion of motivation.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 mt-3">
+                    <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
                         <img src="{{ asset('img/Quality.jpg') }}" alt="Quality" width="180" height="160"></a>
                         <div>
                             <h3 class="fs-5 mt-4 px-4 pb-1">Quality</h3>
                             <p class="px-4">We are committed to offer products in good condition and high-quality service on our platform.</p>
                         </div>
                     </div>
-                    <div class="offset-lg-3 col-lg-6 col-md-12 col-sm-12 mt-3">
+                    <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
                         <img src="{{ asset('img/Security.jpg') }}" alt="Security" width="180c"
                             height="160"></a>
                         <div>
@@ -338,14 +342,13 @@
                             <p class="px-4">Our goal is to ensure the integrity of user data and build trust in our platform.</p>
                         </div>
                     </div>
-
                 </div>
-                <div>
-                </div >
+
+                <hr>
                 <div id="our_work" style="scroll-margin-top: 100px">
-                    <h2 class="text-center my-5">Our work</h2>
+                    <h2 class="text-center my-5 title">Our work</h2>
                     <div class="row mx-auto my-5 align-items-center">
-                        <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="col-lg-7 col-md-12 col-sm-12">
                             <p style="font-size: 120%; text-align:justify">
                                 At BOOKET, our passion is education and accessibility
                                 to knowledge. We are proud to offer an online platform
@@ -360,7 +363,7 @@
                                 the empowerment of students everywhere.
                             </p>
                         </div>
-                        <div class="col-12 col-md-4">
+                        <div class="col-12 col-md-4 offset-md-1">
                             <img class="img-fluid rounded" src="{{ asset('img/us.jpg') }}" alt="Ourwork">
                         </div>
                     </div>

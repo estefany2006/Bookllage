@@ -1,11 +1,11 @@
 @props(['name', 'publisher', 'price' => 0.0, 'edition', 'date', 'isTransaction' => true])
 
-<div class="col mb-5">
+<div class="col">
     <div class="card h-100">
         <!-- Product image-->
         <img class="card-img-top"
-            src="https://www.medicosrepublic.com/wp-content/uploads/2017/11/Grays-Anatomy-for-Students-3rd-Edition-PDF.jpg"
-            alt="..." />
+             src="https://www.medicosrepublic.com/wp-content/uploads/2017/11/Grays-Anatomy-for-Students-3rd-Edition-PDF.jpg"
+             alt="..."/>
         <!-- Product details-->
         <div class="card-body p-4">
             <div class="text-center">
@@ -15,17 +15,17 @@
 
                 <!-- Product price-->
 
-                Published by:
-                {{ $publisher }}
-
                 <div>
-                    Price: {{ $price }}
+                    Author: {{ $publisher }}
                 </div>
-
+                @if ($isTransaction)
+                    <div>
+                        Price: {{ $price }}
+                    </div>
+                @endif
                 <div>
                     Edition: {{ $edition }}
                 </div>
-
                 <div>
                     Date: {{ $date }}
                 </div>
