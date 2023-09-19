@@ -1,6 +1,7 @@
 <x-layout>
-
-    <x-categoryType items="{{ $inventoryItems }}"/>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <x-categoryType category="Medicine">
+        @foreach ($inventoryItems as $item)
+            <x-inventorycard name="{{ $item->book->name}}" publisher="{{ $item->user->first_name}}" price="${{ $item->price}}" edition="4" date="23/23/2" />
+        @endforeach
+    </x-categoryType>
 </x-layout>
