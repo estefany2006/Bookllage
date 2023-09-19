@@ -184,44 +184,37 @@
 
                     </div>
                     <div class="col-12 col-md-4">
-                        <div>
-                            <img src="{{ asset('img/Kelvin.jpg') }}"
-                                 class="card-img-top d-flex justify-content-center" alt="Estefany">
+                        <img src="{{ asset('img/Kelvin.jpg') }}"
+                             class="card-img-top d-flex justify-content-center" alt="Estefany">
 
-                            <div class="card-body mt-3 text-center">
-                                <h5 class="card-title">Kelvin Gamez</h5>
-                                <p class="card-text">Back-end developer.</p>
-                            </div>
+                        <div class="card-body mt-3 text-center">
+                            <h5 class="card-title">Kelvin Gamez</h5>
+                            <p class="card-text">Back-end developer.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
-                        <div>
-                            <img src="{{ asset('img/Diana.jpg') }}"
-                                 class="card-img-top d-flex justify-content-center" alt="Estefany">
-                            <div class="card-body mt-3 text-center">
-                                <h5 class="card-title">Diana Pérez</h5>
-                                <p class="card-text">Front-end developer.</p>
-                            </div>
+                        <img src="{{ asset('img/Diana.jpg') }}"
+                             class="card-img-top d-flex justify-content-center" alt="Estefany">
+                        <div class="card-body mt-3 text-center">
+                            <h5 class="card-title">Diana Pérez</h5>
+                            <p class="card-text">Front-end developer.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <img src="{{ asset('img/Anibal.jpg') }}"
+                             class="card-img-top d-flex justify-content-center" alt="Estefany">
+                        <div class="card-body mt-3 text-center">
+                            <h5 class="card-title">Anibal Mendez</h5>
+                            <p class="card-text">Back-end developer.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-4">
-                        <div>
-                            <img src="{{ asset('img/Anibal.jpg') }}"
-                                 class="card-img-top d-flex justify-content-center" alt="Estefany">
-                            <div class="card-body mt-3 text-center">
-                                <h5 class="card-title">Anibal Mendez</h5>
-                                <p class="card-text">Back-end developer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div>
-                            <img src="{{ asset('img/Yamileth.png') }}"
-                                 class="card-img-top d-flex justify-content-center" alt="Estefany">
-                            <div class="card-body mt-3 text-center">
-                                <h5 class="card-title">Ana Garcia</h5>
-                                <p class="card-text">Front-end developer.</p>
-                            </div>
+                        <img src="{{ asset('img/Yamileth.png') }}"
+                             class="card-img-top d-flex justify-content-center" alt="Estefany">
+                        <div class="card-body mt-3 text-center">
+                            <h5 class="card-title">Ana Garcia</h5>
+                            <p class="card-text">Front-end developer.</p>
                         </div>
                     </div>
                 </div>
@@ -255,7 +248,7 @@
                         material essential for academic success and learning.</p>
                 </div>
             </div>
-                <hr class="my-5">
+            <hr class="my-5">
             <div class="col-12 my-5">
                 <h5 class="title">Our values</h5>
             </div>
@@ -303,7 +296,7 @@
         </div>
 
         <div id="our_work" style="scroll-margin-top: 100px">
-        <hr class="my-5">
+            <hr class="my-5">
             <h2 class="text-center my-5 title">Our work</h2>
 
             <div class="row mx-auto my-5 align-items-center">
