@@ -2,142 +2,302 @@
     <x-nav.navbar />
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;500;700&family=Roboto+Condensed:ital,wght@0,400;1,700&family=Ubuntu:wght@300;500;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #919CD9;
-        }
-
-        #form {
-            width: 250px;
+            font-family: 'Laila';
+            max-width: 1200px;
             margin: 0 auto;
-            height: 50px;
         }
 
-        #form p {
-            text-align: center;
+        img {
+            max-width: 100%;
         }
 
-        #form label {
-            font-size: 20px;
+        header {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            justify-content: center;
         }
 
-        input[type="radio"] {
+        .container-title {
+            padding: 30px;
+            background-color: #eee;
+            margin-bottom: 50px;
+            color: #222;
+        }
+
+        main {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .container-img {
+            background-color: #f7f7f9;
+            flex: 1;
+        }
+
+        .container-info-book {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-price {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e4e4e4;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container-price span {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .container-detail-books {
+            padding: 30px 0;
+        }
+
+
+        .container-add-cart {
+            display: flex;
+            gap: 20px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        .container-quantity {
+            position: relative;
+        }
+
+        .input-quantity {
+            background-color: #f7f7f7;
+            border: none;
+            padding: 10px;
+            width: 60px;
+            height: 100%;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .input-quantity:focus {
+            outline: none;
+        }
+
+        .input-quantity::-webkit-inner-spin-button,
+        .input-quantity::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+
+        .btn-add-to-cart {
+            border: none;
+            background-color: #252525;
+            padding: 10px;
+            color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+
+        .hidden {
             display: none;
         }
 
-        label {
-            color: black;
+        .container-description,
+        .container-additional-information,
+        .container-reviews {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #e4e4e4;
+            padding: 10px 0;
         }
 
-        .clasificacion {
-            direction: rtl;
-            unicode-bidi: bidi-override;
-
+        .title-description,
+        .title-additional-information,
+        .title-reviews {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
         }
 
-        label:hover,
-        label:hover~label {
-            color: orange;
+        .title-description h4,
+        .title-additional-information h4,
+        .title-reviews h4 {
+            font-weight: 300;
+            color: #666;
+            font-size: 14px;
         }
 
-        input[type="radio"]:checked~label {
-            color: orange;
+        .text-description,
+        .text-additional-information,
+        .text-reviews {
+            font-size: 13px;
+            color: #252525;
+            line-height: 22px;
+            margin-top: 25px;
         }
 
-        .text-h1 {
-            margin-top: -40px;
+        .containter-social {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            align-items: center;
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        .containter-social span {
+            font-weight: 300;
+            color: #252525;
+        }
+
+        .container-buttons-social {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .container-buttons-social a:link,
+        .container-buttons-social a:visited {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .container-buttons-social a:hover {
+            color-scheme: #1bb3b4;
+        }
+
+        .container-related-products h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .cart-list-products {
+            display: grid;
+            grid-template-columns: repeat(4, 1rf);
+            gap: 25px;
         }
     </style>
 
-    <div
-        style="margin-top: 5%; margin-bottom:5%; margin-left: 5%; margin-right:5%; font-family:Arial, Helvetica, sans-serif">
-        <div
-            class="p-3 mb-2 text-emphasis-secondary row align-items-center container text-center mx-auto my-auto rounded" style="background: #C4D4F2">
-            <div class="col ">
-                <div class="p-3 mb-2 bg-body text-body rounded" style="margin-top: 5%; margin-bottom:5%">
-                    <h6 style="text-align: left">Engineering</h6>
-                    <h3 style="text-align: left">Ecografia Musculoesqueletica</h3>
-                    <br>
-                    <div class="container text-center">
-                        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                            <div class="col">
-                                <div class="p-6">
-                                    <h6 style="text-align:left">Quality:</h6>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="p-6">
-                                    <form>
-                                        <p class="clasificacion" style="text-align:left">
-                                            <input id="radio1" type="radio" name="estrellas" value="5"><!--
-                                        --><label for="radio1">★</label><!--
-                                  --><input id="radio2" type="radio" name="estrellas" value="4"><!--
-                                  --><label for="radio2">★</label><!--
-                                  --><input id="radio3" type="radio" name="estrellas" value="3"><!--
-                                  --><label for="radio3">★</label><!--
-                                  --><input id="radio4" type="radio" name="estrellas" value="2"><!--
-                                  --><label for="radio4">★</label><!--
-                                  --><input id="radio5" type="radio" name="estrellas" value="1"><!--
-                                  --><label for="radio5">★</label>
-                                        </p>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+    <body>
+        <header>
+            <h1></h1>
+        </header>
+        <div class="container-title"></div>
+        <main>
+            <div class="container-img">
+
+                <img src="{{ asset('img/a2.jpg') }}" class="card-img-top d-flex justify-content-center" alt="libro">
+            </div>
+            <div class="container-info-book">
+                <div class="container-price">
+                    <span>$60.00</span>
+                </div>
+
+                <div class="container-detail-books">
+                    <div class="form-group">
+
+                </div>
+                <div class="container-description">
+                    <div class="title-description">
+                            <h4>Description</h4>
                     </div>
-                    <div class="row">
-                        <div class="col-6" style="margin-top:5%; margin-bottom:5% ">
-                            <img src="{{ asset('images/Libro _ecografia_musculoesqueletica.jpg') }}" class="img-fluid"
-                                aligin="right" width="200" height="100" alt="" srcset="">
-                        </div>
-                        <div class="col-6 text-center" style="margin-bottom:5%">
-                            <h6 class="text-h1">Price:</h6>
-                            <h4>$70</h4>
-                            <br>
+                    <div class="text-description">
+                        <p>
+                            This comprehensive undergraduate textbook comprehensively covers the key principles and
+                            concepts of biochemistry, providing a solid foundation for those entering this
+                            multidisciplinary discipline. Throughout its chapters, students will find a clear and
+                            detailed exposition of topics ranging from the structure and function of biomolecules to
+                            metabolic processes, molecular genetics, and cellular regulation. What distinguishes this
+                            book is its focus on the practical application of the knowledge acquired. Each chapter
+                            includes examples and case studies that connect theory to reality, showing how biochemistry
+                            is essential to understanding medical problems, drug therapies, and advances in biomedical
+                            research.
+                        </p>
+                    </div>
+                </div>
+                <div class="container-additional-information">
+                    <div class="title-additional-information">
+                        <h4>Additional Information</h4>
+                    </div>
+                    <div class="text-additional-information">
+                        <div class="col-6" style="margin-bottom:5%">
                             <h6>Publisher:</h6>
-                            <h5>x nombre</h5>
+                            <h6>x nombre</h6>
                             <br>
                             <h6>Author:</h6>
-                            <h5>Jacobson</h5>
+                            <h6>Jacobson</h6>
                             <br>
                             <h6>Date of publication:</h6>
-                            <h5>10 de agosto de 2020</h5>
-                            <h5>
+                            <h6>10 de agosto de 2020</h6>
+                            <h6>
+                        </div>
+                    </div>
+                    <div class="container-reviews">
+                        <div class="title-reviews">
+                            <h4>Book quality</h4>
+                        </div>
+                        <div class="text-reviews">
+                            <p>"Biochemistry: The Basis of Life" is a high quality book. Its binding is strong and
+                                durable, ensuring that the book will withstand constant use and handling over long
+                                periods of time, even in university and intensive study environments. The pages are
+                                printed on quality paper, with excellent readability and clear presentation of graphs,
+                                illustrations and tables.</p>
+                        </div>
 
-                
-                                <x-nav.navlink label="contac" href="/email" />
+                        <div class="container-add-cart">
+                            <div class="container-quantity">
+                                <input type="number" name="" id="" placeholder="1" value="1"
+                                    min="1" class="input-quantity" />
+                            </div>
+                            <a href="/email">
+                                <button class="btn-add-to-cart">
+                                    <i class="fa-solid fa-plus"></i>
+                                    contact with the seller
+                                </button>
+                            </a>
+                        </div>
+                    </div>
 
 
-                                <script>
-                                    document.getElementById("btnIrAFormulario").addEventListener("click", function() {
-                                        window.location.href = "/email";
-                                    });
-                                </script>
-                            </h5>
+                    <div class="container-social">
+                        <span>Our networks</span>
+                        <div class="container-buttons-social">
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="p-3 mb-2 bg-body text-body rounded" style="margin-top: 5%; margin-bottom:5%">
-                    <h1>Ecografia Musculoesqueletica</h1>
-                    <p> En esta obra, concisa y práctica, el autor enseña a realizar e interpretar ecografías
-                        musculoesqueléticas enfatizando en las bases anatómicas y los aspectos fundamentales necesarios
-                        para
-                        realizar satisfactoriamente estos estudios.
-                        Se privilegian las claves anatómicas, los conceptos, las enfermedades y las discusiones, lo que
-                        permitirá una lectura ágil y valiosa. Características principales:
-                        » Alrededor de 1200 imágenes que muestran con claridad los conceptos, técnicas y habilidades que
-                        debe adquirir el operador. »
-                        Instrucciones paso a paso para adquirir la técnica necesaria e interpretar los hallazgos. »
-                        Revisión de la anatomía ecográfica de las articulaciones periféricas que le permitirá al
-                        especialista interpretar los estudios con confianza. »
-                        Revisión de las manifestaciones ecográficas de las principales patologías musculoesqueléticas
-                        para
-                        diferenciar con claridad unas de otras.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+        </main>
+
+        <script src="https://kit.fontawesome.com/6d3ae8abe3.js" crossorigin="anonymous"></script>
+        <script src=""></script>
+    </body>
+
+
+    <script>
+        document.getElementById("btnIrAFormulario").addEventListener("click", function() {
+            window.location.href = "/email";
+        });
+    </script>
 
 </x-layout>
