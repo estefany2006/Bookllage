@@ -1,19 +1,4 @@
-<x-nav.navbar />
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
-
-    <title>Document</title>
+<x-layout>
     <style type="text/css">
         html {
             -webkit-text-size-adjust: 100%;
@@ -182,45 +167,48 @@ Copiar esto
 
         }
     </style>
-</head>
 
-<body>
-    <section class="seccion-perfil-usuario">
-        <div class="perfil-usuario-header">
-            <div class="perfil-usuario-portada">
-                <div class="perfil-usuario-avatar">
-                    <img src="{{ asset('img/perfil.png') }}" alt="img-avatar">
-                    <button type="button" class="boton-avatar">
-                        <i class="far fa-image"></i>
-                    </button>
+
+    <body>
+        <section class="seccion-perfil-usuario">
+            <div class="perfil-usuario-header">
+                <div class="perfil-usuario-portada">
+                    <div class="perfil-usuario-avatar">
+                        <img src="{{ asset('img/perfil.png') }}" alt="img-avatar">
+                        <button type="button" class="boton-avatar">
+                            <i class="far fa-image"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="perfil-usuario-body">
-            <div class="perfil-usuario-bio">
-                @auth
-                <h3>{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</h3>
+            <div class="perfil-usuario-body">
+                <div class="perfil-usuario-bio">
+                    @auth
+                        <h3>{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</h3>
 
-                <p class="texto">Hello, I'm {{ auth()->user()->first_name }}, I hope my books will be of help to you.</p>
+                        <p class="texto">Hello, I'm {{ auth()->user()->first_name }}, I hope my books will be of help to
+                            you.</p>
+                    </div>
+                    <div class="perfil-usuario-footer">
+                        <ul class="lista-datos">
+                            <li><i></i>
+                                <p>Email: {{ auth()->user()->email }}</p>
+                            </li>
+                            <li><i></i>
+                                <p>University: {{ auth()->user()->university }}</p>
+                            </li>
+                            <li><i></i>
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                    <p>You must be logged in to view your profile.</p>
+                @endauth
             </div>
-            <div class="perfil-usuario-footer">
-                <ul class="lista-datos">
-                    <li><i></i>
-                        <p>Email: {{ auth()->user()->email }}</p>
-                    </li>
-                    <li><i></i>
-                        <p>University: {{ auth()->user()->university }}</p>
-                    </li>
-                    <li><i></i>
-                        <p></p>
-                    </li>
-                </ul>
-            </div>
-            @else
-                <p>You must be logged in to view your profile.</p>
-            @endauth
-        </div>
 
-        </div>
-    </section>
-</body>
+            </div>
+        </section>
+    </body>
+
+</x-layout>
