@@ -1,5 +1,5 @@
 <x-layout>
-    <x-nav.navbar/>
+
     <style>
         body {
             background-image: url("img/Libros.jpg");

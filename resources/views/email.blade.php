@@ -83,7 +83,7 @@ button i.fas {
     </style>
 
     <form>
-        <div class="container">
+        <div class="container" style="margin-top: 80px">
             <h2>Contact</h2>
             <form id="contactForm">
                 <label for="nombre">Name:</label>
