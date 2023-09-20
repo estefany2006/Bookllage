@@ -2,7 +2,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
                 <div class="d-flex justify-content-between align-items-center">
-                    <a class="navbar-brand fs-2" href="#"
+                    <a class="navbar-brand fs-2" href="/#"
                         style="font-family: 'Caveat Brush', cursive">
                         <img src="{{ asset('img/logonarbar.png') }}" class="img-fluid me-3" width="80px" height="80px"
                             alt="logo">Booket
