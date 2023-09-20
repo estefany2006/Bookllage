@@ -137,7 +137,7 @@ Route::get('/bookTransaction/{book}', function (Book $book) {
 
 Route::get('/categories', function () {
     return view('categories');
-});
+})->name('login')->middleware(['auth']);
 
 
 Route::get('/medicine', function () {
