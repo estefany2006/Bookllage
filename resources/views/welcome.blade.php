@@ -1,5 +1,4 @@
 <x-layout>
-    <x-nav.navbar/>
 
     <style>
         .d-item {
@@ -137,50 +136,51 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row mx-auto my-5 align-items-center">
-            <div class="col-lg-7 col-md-12 col-sm-12">
-                <p style="text-align: justify; font-size: 120%">
-                    BOOKET is a platform to find university books in a simple and fast way.
-                    We are a team committed to education and believe in the importance of
-                    learning. Imagine a space where you can get advantages and access to a
-                    wide range of categories of university books. Our platform provides you
-                    with all this, among other benefits. Join us in our mission to promote
-                    education and help each other grow as learners and lovers of knowledge.
-                </p>
-            </div>
+        <div class="container">
 
-            <div class="col-12 col-md-4 offset-md-1">
-                <img class="img-fluid rounded" src="{{ asset('img/logo.png') }}" alt="nosotros1">
-            </div>
-        </div>
 
-        <hr class="my-5">
-        <div id="about_us" class="text-center" style="scroll-margin-top: 150px">
-            <h2 class="my-5 title">About us</h2>
             <div class="row mx-auto my-5 align-items-center">
                 <div class="col-lg-7 col-md-12 col-sm-12">
-                    <p style="font-size: 120%; text-align:justify">
-                        In the exciting year 2023, five young students from ¡Supérate!Fundación Poma
-                        came together to bring BOOKET to life. We are focused on facilitating the search for
-                        college books by providing an intuitive and efficient online platform. We pride
-                        ourselves on being passionate advocates of education and firm believers in the
-                        transformative power of learning. We are committed to giving the books you no longer
-                        need another opportunity to serve the college community.
+                    <p style="text-align: justify; font-size: 120%">
+                        BOOKET is a platform to find university books in a simple and fast way.
+                        We are a team committed to education and believe in the importance of
+                        learning. Imagine a space where you can get advantages and access to a
+                        wide range of categories of university books. Our platform provides you
+                        with all this, among other benefits. Join us in our mission to promote
+                        education and help each other grow as learners and lovers of knowledge.
                     </p>
                 </div>
-                <div class="col-12 col-md-4 offset-md-1">
-                    <img class="img-fluid rounded" src="{{ asset('img/aboutus.jpg') }}" alt="Aboutus">
+                <div class="col-12 col-md-4">
+                    <img class="img-fluid rounded" src="{{ asset('img/logo.png') }}" alt="nosotros1">
                 </div>
-                <div class="row row-cols-3 g-4 justify-content-center mt-5">
-                    <div class="col-12 col-md-4">
-                        <img src="{{ asset('img/Tatiana.jpg') }}" class="card-img-top d-flex justify-content-center"
-                             alt="Estefany" style="}">
+            </div>
 
-                        <div class="card-body mt-3 text-center">
-                            <h5 class="card-title">Estefany Mancia</h5>
-                            <p class="card-text">Marketing area.</p>
-                        </div>
+
+            <div id="about_us" style="scroll-margin-top: 100px">
+                <h2 class="text-center my-5 title">About us</h2>
+                <div class="row mx-auto my-5 align-items-center">
+                    <div class="col-lg-7 col-md-12 col-sm-12">
+                        <p style="font-size: 120%; text-align:justify">
+                            In the exciting year 2023, five young students from ¡Supérate!Fundación Poma
+                            came together to bring BOOKET to life. We are focused on facilitating the search for
+                            college books by providing an intuitive and efficient online platform. We pride
+                            ourselves on being passionate advocates of education and firm believers in the
+                            transformative power of learning. We are committed to giving the books you no longer
+                            need another opportunity to serve the college community.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img class="img-fluid rounded" src="{{ asset('img/aboutus.jpg') }}" alt="Aboutus">
+                    </div>
+                    <div class="row row-cols-3 g-4 justify-content-center mt-5">
+                        <div class="col-12 col-md-4">
+                            <img src="{{ asset('img/Tatiana.jpg') }}" class="card-img-top d-flex justify-content-center"
+                                alt="Estefany" style="}">
+
+                            <div class="card-body mt-3 text-center">
+                                <h5 class="card-title">Estefany Mancia</h5>
+                                <p class="card-text">Marketing area.</p>
+                            </div>
 
                     </div>
                     <div class="col-12 col-md-4">
