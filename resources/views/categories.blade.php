@@ -73,55 +73,55 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card h-100">
-        <img src="https://i.pinimg.com/564x/9c/79/80/9c798091458d6eccfc8807b49f88ffb8.jpg" class="card-img-top" alt="...">
+        <img src="{{ asset('img/medicine.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Medicine</h5>
-          <a href="/medicine" class="btn btn-primary">Go somewhere</a>
+          <a href="/medicine" class="btn btn-primary">Discover More</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="https://i.pinimg.com/564x/14/79/a6/1479a6e01a8fa516c527db53234540b0.jpg" class="card-img-top" alt="...">
+        <img src="{{ asset('img/Computerengineering.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Computer engineering</h5>
-          <a href="/computerEngineering" class="btn btn-primary">Go somewhere</a>
+          <a href="/computerEngineering" class="btn btn-primary">Discover More</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="https://i.pinimg.com/564x/d3/8a/46/d38a461c5a10af84ba3a27b7c33316a3.jpg" class="card-img-top" alt="...">
+        <img src="{{ asset('img/Psychology.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Psychology</h5>
-          <a href="/psychology" class="btn btn-primary">Go somewhere</a>
+          <a href="/psychology" class="btn btn-primary">Discover More</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="https://i.pinimg.com/564x/52/be/fa/52befac00264b78116a337916a458371.jpg" class="card-img-top" alt="...">
+        <img src="{{ asset('img/Economic.png') }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Economic</h5>
-          <a href="/economic" class="btn btn-primary">Go somewhere</a>
+          <a href="/economic" class="btn btn-primary">Discover More</a>
         </div>
       </div>
     </div>
     <div class="col">
         <div class="card h-100">
-          <img src="https://i.pinimg.com/564x/89/73/cf/8973cf76b708e220419203b9d5c7491b.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('img/English.png') }}"  class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">English</h5>
-            <a href="/english" class="btn btn-primary">Go somewhere</a>
+            <a href="/english" class="btn btn-primary">Discover More</a>
           </div>
         </div>
       </div>
       <div class="col">
         <div class="card h-100">
-          <img src="https://i.pinimg.com/564x/28/b8/9b/28b89ba7e6692bb6775ad6e5a4cae188.jpg" class="card-img-top" alt="...">
+          <img src="{{ asset('img/Communications.png') }}"  class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Marketing and Communications</h5>
-            <a href="/marketing" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Communications</h5>
+            <a href="/marketing" class="btn btn-primary">Discover More</a>
           </div>
         </div>
       </div>
