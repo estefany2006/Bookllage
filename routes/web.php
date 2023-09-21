@@ -8,6 +8,7 @@ use App\Models\University;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Inventory;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,8 +37,10 @@ Route::get('/categories', function () {
 })->middleware(['auth']);
 
 
-Route::get('/bookdescription', function () {
-    return view('bookdescription');
+Route::get('/bookdescription/{inventory}', function (Inventory $inventory) {
+    return view('bookdescription', [
+        'inventory' => $inventory,
+    ]);
 });
 
 Route::get('/login', function () {
@@ -129,6 +132,7 @@ Route::post('/registerBook', function () {
 Route::get('/bookTransaction/{book}', function (Book $book) {
     return view('bookTransaction', [
         'book' =>  $book,
+        'user_id' => Auth::user()->id,
         'departments' =>  Department::all(),
         'municipalities' =>  Municipality::all(),
         'districts' =>  District::all()
@@ -136,15 +140,22 @@ Route::get('/bookTransaction/{book}', function (Book $book) {
 });
 
 Route::post('/bookTransaction', function () {
-
-    $atributtes = request()->validate([
-        'name' => 'required|string|max:255',
-        'department' => 'required',
-        'municipality' => 'required|string|max:255',
-        'district' => 'required',
-        'category_id' => 'required',
+    $attributes = request()->validate([
+        'user_id' => 'required|exists:users,id',
+        'book_id' => 'required|exists:books,id',
+        'address' => 'required',
+        'district_id' => 'required|exists:districts,id',
         'price' => 'required',
         'description' => 'required',
+    ]);
+
+    $inventory = Inventory::create([...$attributes, 'available' => true]);
+    if ($inventory) {
+        return redirect("bookDescription/$inventory->id");
+    };
+
+    return back()->withErrors([
+        'name' => 'Error'
     ]);
 });
 

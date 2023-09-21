@@ -31,10 +31,10 @@
                         <div class="register px-4 py-5 mb-2">
                             <h5 class="text-center title" style="color: #FFFFFF;">Add the transaction details</h5>
                             <p style="color: #FFFFFF;" class="mb-5">and publish your book</p>
-                            <form action="/signup" method="POST">
+                            <form action="/bookTransaction" method="POST">
                                 @csrf
-
-                                <x-input label="Image" Type="file" name="image" />
+                                <input value="{{ $book->id }}" name="book_id" type="hidden" />
+                                <input value="{{ $user_id }}" name="user_id" type="hidden" />
 
                                 <select class="form-select" aria-label="Default select example" name="department">
                                     <option selected>Department</option>
@@ -51,27 +51,30 @@
                                     @endforeach
                                 </select>
 
-                                <select class="form-select mt-3" aria-label="Default select example" name="district">
+                                <select class="form-select mt-3" aria-label="Default select example" name="district_id">
                                     <option selected>District</option>
                                     @foreach ($districts as $district)
                                         <option value="{{ $district->id }}">{{ $district->name }}</option>
                                     @endforeach
                                 </select>
 
+                                <x-input label="Address" Type="string" name="address" />
+
                                 <div class="mt-3">
                                     <x-input label="Price" Type="number" step="0.01" name="price" />
                                 </div>
 
-                                <x-input label="Description" Type="string" name="descripcion" />
+                                <x-input label="Description" Type="string" name="description" />
 
                                 <div class="form-check text-start">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="available" checked>
                                     <label class="form-check-label" for="flexCheckboxDEfault1">Available</label>
                                 </div>
                                 <div class="form-check text-start">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="flexCheckboxDEfault2">Unavailable</label>
                                 </div>
+
                                 <div class="mt-2">
                                     <x-button label="Upload" type="submit" text="upload" />
                                 </div>

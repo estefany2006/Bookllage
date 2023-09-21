@@ -150,7 +150,6 @@
             font-size: 13px;
             color: #252525;
             line-height: 22px;
-            margin-top: 25px;
         }
 
         .containter-social {
@@ -194,33 +193,29 @@
         }
     </style>
 
-    <body>
+    <h1 class="text-center title" style="margin-top: 120px">Book details</h1>
+    <main class="mt-5">
+        <div class="container-img">
+            <img src="{{ asset('img/a2.jpg') }}" class="card-img-top d-flex justify-content-center" alt="libro">
+        </div>
 
-        <main style="margin-top: 80px">
-            <div class="container-img">
-
-                <img src="{{ asset('img/a2.jpg') }}" class="card-img-top d-flex justify-content-center" alt="libro">
+        <div class="container-info-book">
+            <div class="title-reviews">
+                <h4>Price</h4>
             </div>
-            <div class="container-info-book">
+            <div class="container-price">
+                <span>$ {{ $inventory->price }}</span>
+            </div>
 
-                <div class="title-reviews">
-                    <h4>Price</h4>
-                </div>
-                <div class="container-price">
-                    <span>$60.00</span>
-                </div>
-
-                <div class="container-detail-books">
-                    <div class="form-group">
-
+            <div class="container-detail-books">
+                <div class="container-description">
+                    <div class="title-description">
+                        <h4>Description</h4>
                     </div>
-                    <div class="container-description">
-                        <div class="title-description">
-                            <h4>Description</h4>
-                        </div>
-                        <div class="text-description">
-                            <p>
-                                This comprehensive undergraduate textbook comprehensively covers the key principles and
+                    <div class="text-description">
+                        <p>
+                            {{ $inventory->description }}
+                            <!-- This comprehensive undergraduate textbook comprehensively covers the key principles and
                                 concepts of biochemistry, providing a solid foundation for those entering this
                                 multidisciplinary discipline. Throughout its chapters, students will find a clear and
                                 detailed exposition of topics ranging from the structure and function of biomolecules to
@@ -231,69 +226,69 @@
                                 biochemistry
                                 is essential to understanding medical problems, drug therapies, and advances in
                                 biomedical
-                                research.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container-additional-information">
-                        <div class="title-additional-information">
-                            <h4>Additional Information</h4>
-                        </div>
-                        <div class="text-additional-information">
-                            <div class="col-6" style="margin-bottom:5%">
-                                <h6>Publisher:</h6>
-                                <h6>example@gmail.com</h6>
-                                <br>
-                                <h6>Author:</h6>
-                                <h6>Jacobson</h6>
-                                <br>
-                                <h6>Date of publication:</h6>
-                                <h6>10 de agosto de 2020</h6>
-                                <h6>
-                            </div>
-                        </div>
-
-                            <div class="title-reviews">
-                                <h4>Book quality</h4>
-                            </div>
-                            <div class="text-reviews">
-                                <p>"Biochemistry: The Basis of Life" is a high quality book. Its binding is strong and
-                                    durable, ensuring that the book will withstand constant use and handling over long
-                                    periods of time, even in university and intensive study environments. The pages are
-                                    printed on quality paper, with excellent readability and clear presentation of
-                                    graphs,
-                                    illustrations and tables.</p>
-                            </div>
-
-
-                            <a href="/email">
-                                <button class="btn-add-to-cart">
-                                    <i class="fa-solid fa-plus"></i>
-                                    contact with the seller
-                                </button>
-                            </a>
-
-                    </div>
-
-
-                    <div class="container-social">
-                        <span>Our networks</span>
-                        <div class="container-buttons-social">
-                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                        </div>
+                                research.-->
+                        </p>
                     </div>
                 </div>
-        </main>
+                <div class="container-additional-information">
+                    <div class="title-additional-information">
+                        <h4>Additional Information</h4>
+                    </div>
+                    <div class="text-additional-information">
+                        <div class="col-6" style="margin-bottom:5%">
+                            <h6>Publisher:</h6>
+                            <h6 class="mb-3">{{ $inventory->user->first_name }} {{ $inventory->user->last_name }}</h6>
 
-        <script src="https://kit.fontawesome.com/6d3ae8abe3.js" crossorigin="anonymous"></script>
-    </body>
+                            <h6>Author:</h6>
+                            <h6 class="mb-3">{{ $inventory->book->publisher }}</h6>
+
+                            <h6>Date of publication:</h6>
+                            <h6 class="mb-3">{{ $inventory->created_at }}</h6>
+                        </div>
+                    </div>
+
+                    <div class="title-reviews">
+                        <h4>Book quality</h4>
+                    </div>
+                    <div class="text-reviews">
+                        <p>
+                            "Biochemistry: The Basis of Life" is a high quality book. Its binding is strong and
+                            durable, ensuring that the book will withstand constant use and handling over long
+                            periods of time, even in university and intensive study environments. The pages are
+                            printed on quality paper, with excellent readability and clear presentation of
+                            graphs,
+                            illustrations and tables.</p>
+                    </div>
+
+
+                    <a href="/email">
+                        <button class="btn-add-to-cart">
+                            <i class="fa-solid fa-plus"></i>
+                            contact with the seller
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <div class="container-social">
+                    <span>Our networks</span>
+                    <div class="container-buttons-social">
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/6d3ae8abe3.js" crossorigin="anonymous"></script>
 
     <script>
-        document.getElementById("btnIrAFormulario").addEventListener("click", function() {
+        document.getElementById("btnIrAFormulario").addEventListener("click", function () {
             window.location.href = "/email";
         });
     </script>

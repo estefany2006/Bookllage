@@ -1,4 +1,4 @@
-@props(['name', 'publisher', 'price' => 0.0, 'edition', 'date', 'isTransaction' => true])
+@props(['id', 'name', 'publisher', 'price' => 0.0, 'edition', 'date', 'isTransaction' => true])
 
 <div class="col">
     <div class="card h-100">
@@ -35,7 +35,7 @@
         @if ($isTransaction)
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
-                    <a class="btn btn-outline-dark mt-auto" href="/bookdescription">More detail</a>
+                    <a class="btn btn-outline-dark mt-auto" href="/bookdescription/{{ $id }}">More detail</a>
                 </div>
             </div>
         @endif
