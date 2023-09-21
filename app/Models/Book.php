@@ -12,9 +12,14 @@ class Book extends Model
     protected $guarded = [
         'id'
     ];
-    
+
     public function inventories()
     {
         return $this->belongsTo(Inventory::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }

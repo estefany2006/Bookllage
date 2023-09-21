@@ -371,7 +371,7 @@
             </div>
         </div>
     </div>
-    <footer class="py-5" style="background-color: #3D3B94">
+    <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Booket &copy; 2023</p>
         </div>

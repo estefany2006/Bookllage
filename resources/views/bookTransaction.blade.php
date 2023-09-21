@@ -1,7 +1,8 @@
 <x-layout>
+
     <style>
         body {
-            background-image: url("img/Libros.jpg");
+            background-image: url("img/lib.jpg");
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -22,8 +23,7 @@
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-3">
                     <x-inventoryCard name=" {{ $book->name }} " publisher="{{ $book->publisher }}"
-                                     edition=" {{ $book->price }}" date=" {{ $book->date }}"
-                                     isTransaction="{{ false }}"/>
+                        edition=" {{ $book->price }}" date=" {{ $book->date }}" isTransaction="{{ false }}" />
                 </div>
 
                 <div class="col-9">
@@ -34,7 +34,7 @@
                             <form action="/signup" method="POST">
                                 @csrf
 
-                                <x-input label="Image" Type="file" name="image"/>
+                                <x-input label="Image" Type="file" name="image" />
 
                                 <select class="form-select" aria-label="Default select example" name="department">
                                     <option selected>Department</option>
@@ -43,7 +43,8 @@
                                     @endforeach
                                 </select>
 
-                                <select class="form-select mt-3" aria-label="Default select example" name="municipality">
+                                <select class="form-select mt-3" aria-label="Default select example"
+                                    name="municipality">
                                     <option selected>Municipality</option>
                                     @foreach ($municipalities as $municipality)
                                         <option value="{{ $municipality->id }}">{{ $municipality->name }}</option>
@@ -58,10 +59,10 @@
                                 </select>
 
                                 <div class="mt-3">
-                                    <x-input label="Price" Type="number" step="0.01" name="price"/>
+                                    <x-input label="Price" Type="number" step="0.01" name="price" />
                                 </div>
 
-                                <x-input label="Description" Type="string" name="descripcion"/>
+                                <x-input label="Description" Type="string" name="descripcion" />
 
                                 <div class="form-check text-start">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
@@ -72,7 +73,7 @@
                                     <label class="form-check-label" for="flexCheckboxDEfault2">Unavailable</label>
                                 </div>
                                 <div class="mt-2">
-                                    <x-button label="Upload" type="submit" text="upload"/>
+                                    <x-button label="Upload" type="submit" text="upload" />
                                 </div>
                             </form>
                         </div>

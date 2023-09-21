@@ -14,17 +14,16 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        $categories_id = Category::pluck('id');
 
-        Book::factory(25)->sequence(fn($sqn) => [
-            'category_id' => $categories_id->random()
-        ])->create();
-        /*Book::create([
-            'name' => 'Anatomia de gray',
-            'publisher' => 'Henry Gray',
+
+        Book::create([
+            'name' => 'Bioquimica',
+            'publisher' => 'Jacobson',
             'edition' => 'N/A',
-            'date' => '1858'
+            'category_id' => '2',
+            'date' => '20/05/20'
         ]);
+        /*
         Book::create([
             'name' => 'Libro1',
             'publisher' => 'Yo',

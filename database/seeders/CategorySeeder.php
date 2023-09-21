@@ -21,7 +21,7 @@ class CategorySeeder extends Seeder
                 'Psychology',
                 'Economic',
                 'English',
-                'Marketing and Communications',
+                'Communications',
             ]
         );
 

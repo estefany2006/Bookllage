@@ -135,44 +135,63 @@ Route::get('/bookTransaction/{book}', function (Book $book) {
     ]);
 });
 
+Route::post('/bookTransaction', function () {
+
+    $atributtes = request()->validate([
+        'name' => 'required|string|max:255',
+        'department' => 'required',
+        'municipality' => 'required|string|max:255',
+        'district' => 'required',
+        'category_id' => 'required',
+        'price' => 'required',
+        'description' => 'required',
+    ]);
+});
+
 Route::get('/categories', function () {
     return view('categories');
 })->name('login')->middleware(['auth']);
 
 
 Route::get('/medicine', function () {
+    $categoryID = Category::firstWhere('name', 'Medicine')->id;
     return view('medicine', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/computerEngineering', function () {
+    $categoryID = Category::firstWhere('name', 'Computer Engineering')->id;
     return view('computerEngineering', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/psychology', function () {
+    $categoryID = Category::firstWhere('name', 'Psychology')->id;
     return view('psychology', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/economic', function () {
+    $categoryID = Category::firstWhere('name', 'Economic')->id;
     return view('economic', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/english', function () {
+    $categoryID = Category::firstWhere('name', 'English')->id;
     return view('english', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/marketing', function () {
+    $categoryID = Category::firstWhere('name', 'Communications')->id;
     return view('marketing', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
