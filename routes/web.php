@@ -121,7 +121,7 @@ Route::post('/registerBook', function () {
     ]);
 
     if ($book = Book::create($atributtes)) {
-        return redirect('bookTransaction')->with('book', $book);
+        return redirect("bookTransaction/$book->id");
     };
 
     return back()->withErrors([
@@ -133,9 +133,9 @@ Route::get('/bookTransaction/{book}', function (Book $book) {
     return view('bookTransaction', [
         'book' =>  $book,
         'user_id' => Auth::user()->id,
-        'departments' =>  Department::all(),
-        'municipalities' =>  Municipality::all(),
-        'districts' =>  District::all()
+        'departments' =>  json_encode(Department::all()),
+        'municipalities' =>  json_encode(Municipality::all()),
+        'districts' =>  json_encode(District::all())
     ]);
 });
 
@@ -151,7 +151,7 @@ Route::post('/bookTransaction', function () {
 
     $inventory = Inventory::create([...$attributes, 'available' => true]);
     if ($inventory) {
-        return redirect("bookDescription/$inventory->id");
+        return redirect("bookdescription/$inventory->id");
     };
 
     return back()->withErrors([
