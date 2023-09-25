@@ -325,21 +325,16 @@
                 <a href="https://www.ujmd.edu.sv/"><img src="{{ asset('img/delgado.png') }}"
                                                         alt="Dr.MatiasJoséDelgado" width="180c" height="160"></a>
                 <div>
-                    <h3 class="fs-5 mt-4 px-4 pb-1">Universidad Dr. José Matías Delgado</h3>
-                    <p class="px-4">La Univerisdad Dr. José Matías Delago (UJMD) es una universidad
-                        privada
-                        ubicada en La
-                        Libertad, El Salvador.</p>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Dr. José Matías Delgado</h3>
+                    <p class="px-4">The Dr. José Matías Delgado University (UJMD) is a private university located in La Libertad, El Salvador.</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <a href="https://www.ues.edu.sv/"><img src="{{ asset('img/UES.jpg') }}" alt="ues"
                                                        width="180" height="160"></a>
                 <div>
-                    <h3 class="fs-5 mt-4 px-4 pb-1">Universidad de El Salvador</h3>
-                    <p class="px-4">La Univerisdad de El Salvador (UES) es la institución de educación
-                        superior
-                        más grande y antigua de la República de El Salvador.</p>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">University of El Salvador</h3>
+                    <p class="px-4">The University of El Salvador (UES) is the largest and oldest institution of higher education in the Republic of El Salvador..</p>
                 </div>
             </div>
         </div>
@@ -348,11 +343,8 @@
                 <a href="https://www.esen.edu.sv/"><img src="{{ asset('img/ESEN.png') }}" alt="ESEN"
                                                         width="180" height="160"></a>
                 <div>
-                    <h3 class="fs-5 mt-4 px-4 pb-1">Universidad La ESEN</h3>
-                    <p class="px-4">La ESEN es una institución de educación superior, privada, sin fines
-                        de
-                        lucro, ubicada en la ciudad de Santa Tecla, departamento de La Libertad, El
-                        Salvador.
+                    <h3 class="fs-5 mt-4 px-4 pb-1">ESEN</h3>
+                    <p class="px-4">ESEN is a private, non-profit higher education institution located in the city of Santa Tecla, department of La Libertad, El Salvador.
                     </p>
                 </div>
             </div>
@@ -360,13 +352,8 @@
                 <a href="https://uca.edu.sv/"><img src="{{ asset('img/UCA.png') }}" alt="UCA"
                                                    width="180" height="160"></a>
                 <div>
-                    <h3 class="fs-5 mt-4 px-4 pb-1">Universidad Centroamericana José Siméon Cañas </h3>
-                    <p class="px-4">La Universidad Centroamericana José Simeón Cañas, conocida
-                        simplemente
-                        como
-                        UCA El Salvador, es un centro de educación superior jesuita salvadoreño, de capital
-                        privado
-                        sin fines de lucro, también denominada como UCA.</p>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Centroamericana José Siméon Cañas </h3>
+                    <p class="px-4">The University Centroamericana José Simeón Cañas, known simply as UCA El Salvador, is a Salvadoran Jesuit higher education center, privately owned and non-profit, also known as UCA.</p>
                 </div>
             </div>
         </div>
