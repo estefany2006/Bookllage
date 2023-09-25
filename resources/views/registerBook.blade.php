@@ -2,7 +2,7 @@
 
     <style>
         body {
-            background-image: url("img/Libros.jpg");
+            background-image: url("img/lib.jpg");
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -13,9 +13,9 @@
         }
 
         .register{
-        /*background: linear-gradient(#5688a7, transparent);*/
-        background: linear-gradient(#284259af, #8e81e662, #a6b2f777);
-    }
+            /*background: linear-gradient(#5688a7, transparent);*/
+            background: linear-gradient(#284259af, #8e81e662, #a6b2f777);
+        }
     </style>
 
     <section class="main" style="margin-top: 80px">
@@ -24,7 +24,7 @@
                 <div class="form-box px-5 py-4">
                     <div class="register p-3 mb-2 ">
 
-                        <h2 class="text-center mb-4">Make sure that the book is already registered</h2>
+                        <h2 class="text-center mb-4" style="color: #FFFFFF;">Make sure that the book is already registered</h2>
                         <form x-data="{book_id: 0}" @submit.prevent="window.location.href = `/bookTransaction/${book_id}`">
                             @csrf
                             <select class="form-select" aria-label="Default select example" name="book" x-model="book_id">
@@ -45,7 +45,7 @@
                             @csrf
                             <x-input label="Book name" Type="text" name="name" class="form-control" />
 
-                            <x-input label="Publisher" Type="text" name="publisher" class="form-control" />
+                            <x-input label="Author" Type="text" name="publisher" class="form-control" />
 
                             <x-input label="Edition" Type="text" name="edition" />
 

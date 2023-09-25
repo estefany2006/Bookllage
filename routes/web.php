@@ -8,6 +8,7 @@ use App\Models\University;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Inventory;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,8 +37,10 @@ Route::get('/categories', function () {
 })->middleware(['auth']);
 
 
-Route::get('/bookdescription', function () {
-    return view('bookdescription');
+Route::get('/bookdescription/{inventory}', function (Inventory $inventory) {
+    return view('bookdescription', [
+        'inventory' => $inventory,
+    ]);
 });
 
 Route::get('/login', function () {
@@ -118,7 +121,7 @@ Route::post('/registerBook', function () {
     ]);
 
     if ($book = Book::create($atributtes)) {
-        return redirect('bookTransaction')->with('book', $book);
+        return redirect("bookTransaction/$book->id");
     };
 
     return back()->withErrors([
@@ -129,9 +132,30 @@ Route::post('/registerBook', function () {
 Route::get('/bookTransaction/{book}', function (Book $book) {
     return view('bookTransaction', [
         'book' =>  $book,
-        'departments' =>  Department::all(),
-        'municipalities' =>  Municipality::all(),
-        'districts' =>  District::all()
+        'user_id' => Auth::user()->id,
+        'departments' =>  json_encode(Department::all()),
+        'municipalities' =>  json_encode(Municipality::all()),
+        'districts' =>  json_encode(District::all())
+    ]);
+});
+
+Route::post('/bookTransaction', function () {
+    $attributes = request()->validate([
+        'user_id' => 'required|exists:users,id',
+        'book_id' => 'required|exists:books,id',
+        'address' => 'required',
+        'district_id' => 'required|exists:districts,id',
+        'price' => 'required',
+        'description' => 'required',
+    ]);
+
+    $inventory = Inventory::create([...$attributes, 'available' => true]);
+    if ($inventory) {
+        return redirect("bookdescription/$inventory->id");
+    };
+
+    return back()->withErrors([
+        'name' => 'Error'
     ]);
 });
 
@@ -141,38 +165,44 @@ Route::get('/categories', function () {
 
 
 Route::get('/medicine', function () {
+    $categoryID = Category::firstWhere('name', 'Medicine')->id;
     return view('medicine', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/computerEngineering', function () {
+    $categoryID = Category::firstWhere('name', 'Computer Engineering')->id;
     return view('computerEngineering', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/psychology', function () {
+    $categoryID = Category::firstWhere('name', 'Psychology')->id;
     return view('psychology', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/economic', function () {
+    $categoryID = Category::firstWhere('name', 'Economic')->id;
     return view('economic', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/english', function () {
+    $categoryID = Category::firstWhere('name', 'English')->id;
     return view('english', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 
 Route::get('/marketing', function () {
+    $categoryID = Category::firstWhere('name', 'Communications')->id;
     return view('marketing', [
-        'inventoryItems' => Inventory::where('available', true)->get()
+        'inventoryItems' => Inventory::where('available', true)->whereRelation('book', 'category_id', $categoryID)->get()
     ]);
 });
 

@@ -1,7 +1,5 @@
 <x-layout>
 
-    <x-nav.navbar/>
-
     <style>
         .d-item {
     height: 100%;
@@ -51,11 +49,7 @@
 }
     </style>
 
-    <br>
-    <br>
-    <br>
-
-    <div class="carousel-inner" style="height: calc(100vh - 80px)">
+    <div class="carousel-inner" style="height: calc(60vh - 50px)">
         <div class="d-item carousel-item active ">
             <img src="https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
                 class="d-block w-100 d-img" alt="slider 1">

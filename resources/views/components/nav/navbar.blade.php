@@ -21,6 +21,8 @@
 
                         <x-nav.navlink label="About us" href="/#about_us" />
 
+                        <x-nav.navlink label="Categories" href="/categories" />
+
                         @guest
                             <x-nav.navlink label="Login" href="/login" />
                         @endguest

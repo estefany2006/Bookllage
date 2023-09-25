@@ -1,4 +1,6 @@
 <?php
+
+use App\Models\District;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Municipality;
@@ -17,15 +19,15 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(Book::class)->constrained();
             $table->string('address');
-            $table->foreignIdFor(Municipality::class)->constrained();
+            $table->foreignIdFor(District::class)->constrained();
             $table->float('price');
-            $table->integer('image');
-            $table->boolean('available');
+            //$table->integer('image');
+            $table->boolean('available')->default(true);
             $table->text('description');
 
             $table->foreignIdFor(User::class)->constrained();
-            $table->float('fee');
-            $table->date('date');
+            $table->float('fee')->nullable();
+            //$table->date('date');
 
             $table->timestamps();
         });

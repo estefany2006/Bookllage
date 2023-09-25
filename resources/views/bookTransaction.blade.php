@@ -1,7 +1,8 @@
 <x-layout>
+
     <style>
         body {
-            background-image: url("img/Libros.jpg");
+            background-image: url("img/lib.jpg");
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -31,46 +32,76 @@
                         <div class="register px-4 py-5 mb-2">
                             <h5 class="text-center title" style="color: #FFFFFF;">Add the transaction details</h5>
                             <p style="color: #FFFFFF;" class="mb-5">and publish your book</p>
-                            <form action="/signup" method="POST">
+                            <form action="/bookTransaction" method="POST"
+                                  x-data="{
+                                    department_id: 0,
+                                    municipality_id:0,
+                                    district_id:0,
+                                    departments: {{ $departments }},
+                                    get municipalities() {
+                                        this.municipality_id = 0;
+                                        return {{ $municipalities }}.filter(i => i.department_id == this.department_id);
+                                    },
+                                    get districts() {
+                                        this.district_id = 0;
+                                        return {{ $districts }}.filter(i => i.municipality_id == this.municipality_id);
+                                    },
+                                  }">
                                 @csrf
+                                <input value="{{ $book->id }}" name="book_id" type="hidden"/>
+                                <input value="{{ $user_id }}" name="user_id" type="hidden"/>
 
-                                <x-input label="Image" Type="file" name="image"/>
-
-                                <select class="form-select" aria-label="Default select example" name="department">
+                                <select class="form-select" x-model="department_id">
                                     <option selected>Department</option>
-                                    @foreach ($departments as $department)
-                                        <option value="{{ $department->id }}">{{ $department->name }}</option>
-                                    @endforeach
+                                    <template x-for="department in departments">
+                                        <option :value="department.id" x-text="department.name"></option>
+                                    </template>
                                 </select>
 
-                                <select class="form-select mt-3" aria-label="Default select example" name="municipality">
+                                <select class="form-select mt-3" x-model="municipality_id">
                                     <option selected>Municipality</option>
-                                    @foreach ($municipalities as $municipality)
-                                        <option value="{{ $municipality->id }}">{{ $municipality->name }}</option>
-                                    @endforeach
+                                    <template x-for="municipality in municipalities">
+                                        <option :value="municipality.id" x-text="municipality.name"></option>
+                                    </template>
                                 </select>
 
-                                <select class="form-select mt-3" aria-label="Default select example" name="district">
+                                <select class="form-select mt-3" x-model="district_id" name="district_id">
                                     <option selected>District</option>
-                                    @foreach ($districts as $district)
-                                        <option value="{{ $district->id }}">{{ $district->name }}</option>
-                                    @endforeach
+                                    <template x-for="district in districts">
+                                        <option :value="district.id" x-text="district.name"></option>
+                                    </template>
                                 </select>
+
+                                <!--<select class="form-select mt-3" x-model="municipality_id" name="municipality">
+                                    <option selected>Municipality</option>
+                                        <option x-show="department_id"></option>
+                                </select>
+
+                                <select class="form-select mt-3" x-model="district_id" name="district_id">
+                                    <option selected>District</option>
+                                        <option>}</option>
+                                </select>-->
+
+                                <div class="mt-3">
+                                    <x-input label="Address" Type="string" name="address"/>
+                                </div>
 
                                 <div class="mt-3">
                                     <x-input label="Price" Type="number" step="0.01" name="price"/>
                                 </div>
 
-                                <x-input label="Description" Type="string" name="descripcion"/>
+                                <x-input label="Description" Type="string" name="description"/>
 
                                 <div class="form-check text-start">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" name="available"
+                                           checked>
                                     <label class="form-check-label" for="flexCheckboxDEfault1">Available</label>
                                 </div>
                                 <div class="form-check text-start">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                     <label class="form-check-label" for="flexCheckboxDEfault2">Unavailable</label>
                                 </div>
+
                                 <div class="mt-2">
                                     <x-button label="Upload" type="submit" text="upload"/>
                                 </div>
