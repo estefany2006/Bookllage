@@ -161,7 +161,7 @@
                 <div class="row mx-auto my-5 align-items-center">
                     <div class="col-lg-7 col-md-12 col-sm-12">
                         <p style="font-size: 120%; text-align:justify">
-                            In the exciting year 2023, five young students from ¡Supérate!Fundación Poma
+                            In the exciting year 2023, five young students from ¡Supérate! Fundación Poma
                             came together to bring BOOKET to life. We are focused on facilitating the search for
                             college books by providing an intuitive and efficient online platform. We pride
                             ourselves on being passionate advocates of education and firm believers in the
