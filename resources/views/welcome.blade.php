@@ -121,7 +121,6 @@
         }
     </style>
 
-    <body>
     <div class="position-relative overflow-y-hidden" style="height: 100vh">
         <video class="w-100" autoplay muted loop >
             <source src="/videos/intro.mp4" type="video/mp4">
@@ -138,9 +137,8 @@
 
         <div class="container">
 
-
             <div class="row mx-auto my-5 align-items-center">
-                <div class="col-lg-7 col-md-12 col-sm-12">
+                <div class="col-lg-7 col-md-8 col-sm-12">
                     <p style="text-align: justify; font-size: 120%">
                         BOOKET is a platform to find university books in a simple and fast way.
                         We are a team committed to education and believe in the importance of
@@ -150,7 +148,7 @@
                         education and help each other grow as learners and lovers of knowledge.
                     </p>
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-4 col-md-4">
                     <img class="img-fluid rounded" src="{{ asset('img/logo.png') }}" alt="nosotros1">
                 </div>
             </div>
@@ -159,7 +157,7 @@
             <div id="about_us" style="scroll-margin-top: 100px">
                 <h2 class="text-center my-5 title">About us</h2>
                 <div class="row mx-auto my-5 align-items-center">
-                    <div class="col-lg-7 col-md-12 col-sm-12">
+                    <div class="col-lg-7 col-md-8 col-sm-12">
                         <p style="font-size: 120%; text-align:justify">
                             In the exciting year 2023, five young students from ¡Supérate! Fundación Poma
                             came together to bring BOOKET to life. We are focused on facilitating the search for
@@ -226,7 +224,7 @@
             <div class="col-12 my-5">
                 <h5 class="title">Our purpose</h5>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <img src="{{ asset('img/mission.jpg') }}" width="180c"
                      height="160">
                 <div>
@@ -237,7 +235,7 @@
                         college students at the same time. </p>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <img src="{{ asset('img/vision.jpg') }}" width="180" height="160">
                 <div>
                     <h3 class="fs-5 mt-4 px-4 pb-1">Vision</h3>
@@ -252,7 +250,7 @@
             <div class="col-12 my-5">
                 <h5 class="title">Our values</h5>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <img src="{{ asset('img/inovation.jpg') }}" alt="Inovation" width="180c" height="160"></a>
                 <div>
                     <h3 class="fs-5 mt-4 px-4 pb-1">Innovation</h3>
@@ -260,7 +258,7 @@
                         effectively addressing the current challenges often faced by university students.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <img src="{{ asset('img/motivation.jpg') }}" alt="Motivation" width="180" height="160"></a>
                 <div>
                     <h3 class="fs-5 mt-4 px-4 pb-1">Motivation</h3>
@@ -268,7 +266,7 @@
                         incidence of university dropouts due to economic constraints.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <img src="{{ asset('img/overcoming.jpg') }}" alt="Ovecomming" width="180c" height="160"></a>
                 <div>
                     <h3 class="fs-5 mt-4 px-4 pb-1">Overcoming</h3>
@@ -276,7 +274,7 @@
                         of motivation.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <img src="{{ asset('img/Quality.jpg') }}" alt="Quality" width="180" height="160"></a>
                 <div>
                     <h3 class="fs-5 mt-4 px-4 pb-1">Quality</h3>
@@ -284,7 +282,7 @@
                         on our platform.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 mt-3">
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
                 <img src="{{ asset('img/Security.jpg') }}" alt="Security" width="180c" height="160"></a>
                 <div>
                     <h3 class="fs-5 mt-4 px-4 pb-1">Security and confidence</h3>
@@ -300,7 +298,7 @@
             <h2 class="text-center my-5 title">Our work</h2>
 
             <div class="row mx-auto my-5 align-items-center">
-                <div class="col-lg-7 col-md-12 col-sm-12">
+                <div class="col-lg-7 col-md-7 col-sm-12">
                     <p style="font-size: 120%; text-align:justify">
                         At BOOKET, our passion is education and accessibility
                         to knowledge. We are proud to offer an online platform
@@ -321,7 +319,7 @@
             </div>
         </div>
         <div class="row w-75 mx-auto my-5 universidades-fila container-fluid">
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <a href="https://www.ujmd.edu.sv/"><img src="{{ asset('img/delgado.png') }}"
                                                         alt="Dr.MatiasJoséDelgado" width="180c" height="160"></a>
                 <div>
@@ -329,7 +327,7 @@
                     <p class="px-4">The Dr. José Matías Delgado University (UJMD) is a private university located in La Libertad, El Salvador.</p>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <a href="https://www.ues.edu.sv/"><img src="{{ asset('img/UES.jpg') }}" alt="ues"
                                                        width="180" height="160"></a>
                 <div>
@@ -338,8 +336,8 @@
                 </div>
             </div>
         </div>
-        <div class="row w-75 mx-auto my-5 universidades-fila">
-            <div class="col-lg-6 col-md-12 col-sm-12">
+        <div class="row  mx-auto my-5 universidades-fila">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <a href="https://www.esen.edu.sv/"><img src="{{ asset('img/ESEN.png') }}" alt="ESEN"
                                                         width="180" height="160"></a>
                 <div>
@@ -348,7 +346,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <a href="https://uca.edu.sv/"><img src="{{ asset('img/UCA.png') }}" alt="UCA"
                                                    width="180" height="160"></a>
                 <div>

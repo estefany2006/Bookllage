@@ -22,6 +22,13 @@ class UserSeeder extends Seeder
             'password' => 'password'
         ]);
 
+        User::factory(1)->create([
+            'first_name' => 'Junior',
+            'last_name' => 'Student',
+            'email' => 'example@example.com',
+            'support_email' => 'abc@',
+            'password' => 'password'
+        ]);
 
        /* UserSeeder::create([
             'first_name' => 'Anibal',
