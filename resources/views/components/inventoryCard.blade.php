@@ -2,9 +2,11 @@
 
 <div class="col">
     <div class="card h-100">
+        @if ($isTransaction)
         <!-- Product image-->
         <img class="card-img-top" src="{{ asset('img/a2.jpg') }}" class="card-img-top d-flex justify-content-center" alt="libro">
         <!-- Product details-->
+        @endif
         <div class="card-body p-4">
             <div class="text-center">
                 <!-- Product name-->

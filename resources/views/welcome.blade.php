@@ -123,7 +123,7 @@
 
     <body>
     <div class="position-relative overflow-y-hidden" style="height: 100vh">
-        <video class="w-100" autoplay muted>
+        <video class="w-100" autoplay muted loop >
             <source src="/videos/intro.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
