@@ -274,11 +274,8 @@
                 <div class="container-social">
                     <span>Our networks</span>
                     <div class="container-buttons-social">
-                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61552102250407"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com/book_ett?igshid=NGVhN2U2NjQ0Yg=="><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
