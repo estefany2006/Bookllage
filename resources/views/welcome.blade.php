@@ -68,7 +68,7 @@
             border-radius: 6px;
             overflow: hidden;
             background: #fff;
-            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 1px 10px rgba(184, 82, 82, 0.2);
             transition: all 400ms ease;
         }
 
@@ -135,8 +135,8 @@
 
     <div class="container">
         <div class="row mx-auto my-5 align-items-center">
-            <div class="col-lg-7 col-md-8 col-sm-12">
-                <p style="text-align: justify; font-size: 120%">
+            <div class="col-lg-7 col-md-8 col-sm-12" >
+                <p style="text-align: justify; font-size: 120%; font-family:'Teachers'" >
                     BOOKET is a platform to find university books in a simple and fast way.
                     We are a team committed to education and believe in the importance of
                     learning. Imagine a space where you can get advantages and access to a
@@ -153,10 +153,10 @@
 
 
         <div id="about_us" style="scroll-margin-top: 100px">
-            <h2 class="text-center my-5 title">About us</h2>
+            <h2 class="text-center my-5 title" style="font-family: 'Teachers'">About us</h2>
             <div class="row mx-auto my-5 align-items-center">
                 <div class="col-lg-7 col-md-8 col-sm-12">
-                    <p style="font-size: 120%;style= font-family: 'Teachers', serif text-align:justify">
+                    <p style="text-align: justify; font-size: 120%; font-family:'Teachers'">
                         In the exciting year 2023, five young students from ¡Supérate! Fundación Poma
                         came together to bring BOOKET to life. We are focused on facilitating the search for
                         college books by providing an intuitive and efficient online platform. We pride
@@ -165,16 +165,15 @@
                         need another opportunity to serve the college community.
                     </p>
                 </div>
-                <div class="col-12 col-md-4">
-                    <img class="img-fluid rounded" src="{{ asset('img/aboutus.jpg') }}" alt="Aboutus">
-                </div>
+
                 <div class="container" id="cardContainer">
-                    <div class="row row-cols-3 g-4 justify-content-center mt-5">
+                    <div class="row row-cols-6 g-4 justify-content-center mt-5">
+
                         <div class="col-12 col-md-3">
                             <img src="{{ asset('img/Tatiana.jpg') }}" class="card-img-top d-flex justify-content-center"
                                 alt="Estefany" style="}">
 
-                            <div class="card-body mt-3 text-center">
+                            <div class="card-body mt-3 text-center" style="font-family:'Teachers'" >
                                 <h5 class="card-title">Estefany Mancia</h5>
                                 <p class="card-text">Marketing area.</p>
                             </div>
@@ -184,7 +183,7 @@
                             <img src="{{ asset('img/Kelvin.jpg') }}" class="card-img-top d-flex justify-content-center"
                                 alt="Estefany">
 
-                            <div class="card-body mt-3 text-center">
+                            <div class="card-body mt-3 text-center" style="font-family:'Teachers'">
                                 <h5 class="card-title">Kelvin Gamez</h5>
                                 <p class="card-text">Back-end developer.</p>
                             </div>
@@ -193,16 +192,16 @@
                             <img src="{{ asset('img/Diana.jpg') }}" class="card-img-top d-flex justify-content-center"
                                 alt="Estefany">
                             <div class="card-body mt-3 text-center">
-                                <h5 class="card-title">Diana Pérez</h5>
-                                <p class="card-text">Front-end developer.</p>
+                                <h5 class="card-title" style="font-family:'Teachers'">Diana Pérez</h5>
+                                <p class="card-text" style="font-family:'Teachers'">Front-end developer.</p>
                             </div>
                         </div>
 
                         <div class="col-12 col-md-3">
                             <img src="{{ asset('img/Anibal.jpg') }}" class="card-img-top d-flex justify-content-center"
                                 alt="Estefany">
-                            <div class="card-body mt-3 text-center">
-                                <h5 class="card-title">Anibal Mendez</h5>
+                            <div class="card-body mt-3 text-center" style="font-family:'Teachers'">
+                                <h5 class="card-title" >Anibal Mendez</h5>
                                 <p class="card-text">Back-end developer.</p>
                             </div>
                         </div>
@@ -210,8 +209,8 @@
                             <img src="{{ asset('img/Yamileth.png') }}"
                                 class="card-img-top d-flex justify-content-center" alt="Estefany">
                             <div class="card-body mt-3 text-center">
-                                <h5 class="card-title">Ana Garcia</h5>
-                                <p class="card-text">Front-end developer.</p>
+                                <h5 class="card-title" style="font-family:'Teachers'">Ana Garcia</h5>
+                                <p class="card-text" style="font-family:'Teachers'">Front-end developer.</p>
                             </div>
                         </div>
                     </div>
@@ -224,13 +223,13 @@
     <hr class="my-5">
     <div class="row mx-auto my-5 justify-content-center text-center">
         <div class="col-12 my-5">
-            <h5 class="title">Our purpose</h5>
+            <h5 class="title" style="font-family:'Teachers'">Our purpose</h5>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
             <img src="{{ asset('img/mission.jpg') }}" width="180c" height="160">
             <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Mission</h3>
-                <p class="px-4">Streamline the process of finding college books for students' higher
+                <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Mission</h3>
+                <p class="px-4" style="font-family:'Teachers'">Streamline the process of finding college books for students' higher
                     education, encouraging the reuse of college book establishing a secure and reliable
                     connection between college students, with the goal of reducing the financial burden on
                     college students at the same time. </p>
@@ -239,8 +238,8 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
             <img src="{{ asset('img/vision.jpg') }}" width="180" height="160">
             <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Vision</h3>
-                <p class="px-4">Our vision is to reach the entire university community and be the first
+                <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Vision</h3>
+                <p class="px-4" style="font-family:'Teachers'">Our vision is to reach the entire university community and be the first
                     choice for university students seeking academic resources, becoming a platform
                     recognized for the innovation and accessibility that "BOOKET" offers. We aspire to
                     positively impact the lives of college students by facilitating their access to the
@@ -249,12 +248,12 @@
         </div>
         <hr class="my-5">
         <div class="col-12 my-5">
-            <h5 class="title">Our values</h5>
+            <h5 class="title" style="font-family: 'Roboto Serif', serif">Our values</h5>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <img src="{{ asset('img/inovation.jpg') }}" alt="Inovation" width="180c" height="160"></a>
             <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Innovation</h3>
+                <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Innovation</h3>
                 <p class="px-4">we are promoting a solution using technology, with the purpose of
                     effectively addressing the current challenges often faced by university students.</p>
             </div>
@@ -262,45 +261,45 @@
         <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <img src="{{ asset('img/motivation.jpg') }}" alt="Motivation" width="180" height="160"></a>
             <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Motivation</h3>
-                <p class="px-4">We aspire to incentivize to students to push them limits and reduce the
+                <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Motivation</h3>
+                <p class="px-4" style="font-family:'Teachers'">We aspire to incentivize to students to push them limits and reduce the
                     incidence of university dropouts due to economic constraints.</p>
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <img src="{{ asset('img/overcoming.jpg') }}" alt="Ovecomming" width="180c" height="160"></a>
             <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Overcoming</h3>
-                <p class="px-4">We wish to contribute to the field of higher education through the promotion
+                <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Overcoming</h3>
+                <p class="px-4" style="font-family:'Teachers'">We wish to contribute to the field of higher education through the promotion
                     of motivation.</p>
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <img src="{{ asset('img/Quality.jpg') }}" alt="Quality" width="180" height="160"></a>
             <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Quality</h3>
-                <p class="px-4">We are committed to offer products in good condition and high-quality service
+                <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Quality</h3>
+                <p class="px-4" style="font-family:'Teachers'">We are committed to offer products in good condition and high-quality service
                     on our platform.</p>
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <img src="{{ asset('img/Security.jpg') }}" alt="Security" width="180c" height="160"></a>
             <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Security and confidence</h3>
-                <p class="px-4">Our goal is to ensure the integrity of user data and build trust in our
+                <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Security and confidence</h3>
+                <p class="px-4" style="font-family:'Teachers'">Our goal is to ensure the integrity of user data and build trust in our
                     platform.</p>
             </div>
         </div>
 
     </div>
 
-    <div id="our_work" style="scroll-margin-top: 100px">
+    <div id="our_work" style="scroll-margin-top: 150px">
         <hr class="my-5">
-        <h2 class="text-center my-5 title">Our work</h2>
+        <h2 class="text-center my-5 title" style="font-family:'Teachers'">Our work</h2>
 
         <div class="row mx-auto my-5 align-items-center">
             <div class="col-lg-7 col-md-7 col-sm-12">
-                <p style="font-size: 120%; text-align:justify">
+                <p style="font-size: 120%; text-align:justify font-family:'Teachers">
                     At BOOKET, our passion is education and accessibility
                     to knowledge. We are proud to offer an online platform
                     that simplifies the search for college books, providing
@@ -314,54 +313,10 @@
                     the empowerment of students everywhere.
                 </p>
             </div>
-            <div class="col-12 col-md-4 offset-md-1">
-                <img class="img-fluid rounded" src="{{ asset('img/us.jpg') }}" alt="Ourwork">
-            </div>
         </div>
     </div>
-    <div class="row w-75 mx-auto my-5 universidades-fila container-fluid">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <a href="https://www.ujmd.edu.sv/"><img src="{{ asset('img/delgado.png') }}" alt="Dr.MatiasJoséDelgado"
-                    width="180c" height="160"></a>
-            <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Dr. José Matías Delgado</h3>
-                <p class="px-4">The Dr. José Matías Delgado University (UJMD) is a private university located in
-                    La Libertad, El Salvador.</p>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <a href="https://www.ues.edu.sv/"><img src="{{ asset('img/UES.jpg') }}" alt="ues" width="180"
-                    height="160"></a>
-            <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">University of El Salvador</h3>
-                <p class="px-4">The University of El Salvador (UES) is the largest and oldest institution of
-                    higher education in the Republic of El Salvador..</p>
-            </div>
-        </div>
-    </div>
-    <div class="row  mx-auto my-5 universidades-fila">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <a href="https://www.esen.edu.sv/"><img src="{{ asset('img/ESEN.png') }}" alt="ESEN" width="180"
-                    height="160"></a>
-            <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">ESEN</h3>
-                <p class="px-4">ESEN is a private, non-profit higher education institution located in the city of
-                    Santa Tecla, department of La Libertad, El Salvador.
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <a href="https://uca.edu.sv/"><img src="{{ asset('img/UCA.png') }}" alt="UCA" width="180"
-                    height="160"></a>
-            <div>
-                <h3 class="fs-5 mt-4 px-4 pb-1">Centroamericana José Siméon Cañas </h3>
-                <p class="px-4">The University Centroamericana José Simeón Cañas, known simply as UCA El
-                    Salvador, is a Salvadoran Jesuit higher education center, privately owned and non-profit, also
-                    known as UCA.</p>
-            </div>
-        </div>
-    </div>
-    </div>
+
+
     <footer class="py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Booket &copy; 2023</p>
