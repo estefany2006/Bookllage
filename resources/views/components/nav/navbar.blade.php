@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(255, 255, 255, 0.3);">
+<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(255, 255, 255, 0.9);">
     <div class="container-fluid">
         <div class="d-flex justify-content-between align-items-center">
             <a class="navbar-brand fs-2" href="/#" style="font-family: 'Roboto Serif', serif">
