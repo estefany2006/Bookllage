@@ -122,17 +122,187 @@
         }
     </style>
 
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <div class="position-relative overflow-y-hidden" style="height: 100vh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario con Nieve</title>
+        <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Corben:700');
 
-        <div class="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100">
-            <div class="text-center">
-                <h1 class="display-1 fw-bolder text-capitalize text-black" style="font-family: 'Roboto Serif', serif">
-                    Welcome to BOOKET!</h1>
-                <a href="/login" class="btn btn-outline-primary px-4 py-2 fs-5 mt-5">Get started</a>
+            h1 {
+                font-family: 'Corben', cursive;
+                font-size: 3rem;
+                color: white;
+                letter-spacing: 0.1rem;
+                text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.66);
+                text-align: center;
+            }
+
+            .hero {
+                background-image: radial-gradient(50% 176%, #8fb1ff 80%, #8fb1ff 100%);
+                min-height: 100vh;
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .hero__content {
+                position: relative;
+                align-self: center;
+                padding: 1rem 0;
+            }
+
+            .form-container {
+                background: rgba(255, 255, 255, 0.8);
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .snow {
+                position: absolute;
+                min-width: 100vw;
+                min-height: 100vh;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .snow .svg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            #snow-top-layer {
+                will-change: transform;
+                transform: translateY(-768px);
+                animation: fall 22.5s infinite linear;
+            }
+
+            #snow-bottom-layer {
+                will-change: transform;
+                transform: translateY(-768px);
+                animation: fall 45s infinite linear;
+            }
+
+            @keyframes fall {
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="hero position-relative">
+            <div class="z-0 snow">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
+                    <g fill="#FFF" fill-opacity=".15" transform="translate(55 42)">
+                        <g id="snow-bottom-layer">
+                            <ellipse cx="6" cy="1009.5" rx="6" ry="5.5" />
+                            <ellipse cx="138" cy="1110.5" rx="6" ry="5.5" />
+                            <ellipse cx="398" cy="1055.5" rx="6" ry="5.5" />
+                            <ellipse cx="719" cy="1284.5" rx="6" ry="5.5" />
+                            <ellipse cx="760" cy="1155.5" rx="6" ry="5.5" />
+                            <ellipse cx="635" cy="1459.5" rx="6" ry="5.5" />
+                            <ellipse cx="478" cy="1335.5" rx="6" ry="5.5" />
+                            <ellipse cx="322" cy="1414.5" rx="6" ry="5.5" />
+                            <ellipse cx="247" cy="1234.5" rx="6" ry="5.5" />
+                            <ellipse cx="154" cy="1425.5" rx="6" ry="5.5" />
+                            <ellipse cx="731" cy="773.5" rx="6" ry="5.5" />
+                            <ellipse cx="599" cy="874.5" rx="6" ry="5.5" />
+                            <ellipse cx="339" cy="819.5" rx="6" ry="5.5" />
+                            <ellipse cx="239" cy="1004.5" rx="6" ry="5.5" />
+                            <ellipse cx="113" cy="863.5" rx="6" ry="5.5" />
+                            <ellipse cx="102" cy="1223.5" rx="6" ry="5.5" />
+                            <ellipse cx="395" cy="1155.5" rx="6" ry="5.5" />
+                            <ellipse cx="826" cy="943.5" rx="6" ry="5.5" />
+                            <ellipse cx="626" cy="1054.5" rx="6" ry="5.5" />
+                            <ellipse cx="887" cy="1366.5" rx="6" ry="5.5" />
+                            <ellipse cx="6" cy="241.5" rx="6" ry="5.5" />
+                            <ellipse cx="138" cy="342.5" rx="6" ry="5.5" />
+                            <ellipse cx="398" cy="287.5" rx="6" ry="5.5" />
+                            <ellipse cx="719" cy="516.5" rx="6" ry="5.5" />
+                            <ellipse cx="760" cy="387.5" rx="6" ry="5.5" />
+                            <ellipse cx="635" cy="691.5" rx="6" ry="5.5" />
+                            <ellipse cx="478" cy="567.5" rx="6" ry="5.5" />
+                            <ellipse cx="322" cy="646.5" rx="6" ry="5.5" />
+                            <ellipse cx="247" cy="466.5" rx="6" ry="5.5" />
+                            <ellipse cx="154" cy="657.5" rx="6" ry="5.5" />
+                            <ellipse cx="731" cy="5.5" rx="6" ry="5.5" />
+                            <ellipse cx="599" cy="106.5" rx="6" ry="5.5" />
+                            <ellipse cx="339" cy="51.5" rx="6" ry="5.5" />
+                            <ellipse cx="239" cy="236.5" rx="6" ry="5.5" />
+                            <ellipse cx="113" cy="95.5" rx="6" ry="5.5" />
+                            <ellipse cx="102" cy="455.5" rx="6" ry="5.5" />
+                            <ellipse cx="395" cy="387.5" rx="6" ry="5.5" />
+                            <ellipse cx="826" cy="175.5" rx="6" ry="5.5" />
+                            <ellipse cx="626" cy="286.5" rx="6" ry="5.5" />
+                            <ellipse cx="887" cy="598.5" rx="6" ry="5.5" />
+                        </g>
+                    </g>
+                    <g fill="#FFF" fill-opacity=".3" transform="translate(65 63)">
+                        <g id="snow-top-layer">
+                            <circle cx="8" cy="776" r="8" />
+                            <circle cx="189" cy="925" r="8" />
+                            <circle cx="548" cy="844" r="8" />
+                            <circle cx="685" cy="1115" r="8" />
+                            <circle cx="858" cy="909" r="8" />
+                            <circle cx="874" cy="1438" r="8" transform="rotate(180 874 1438)" />
+                            <circle cx="657" cy="1256" r="8" transform="rotate(180 657 1256)" />
+                            <circle cx="443" cy="1372" r="8" transform="rotate(180 443 1372)" />
+                            <circle cx="339" cy="1107" r="8" transform="rotate(180 339 1107)" />
+                            <circle cx="24" cy="1305" r="8" transform="rotate(180 24 1305)" />
+                            <circle cx="8" cy="8" r="8" />
+                            <circle cx="189" cy="157" r="8" />
+                            <circle cx="548" cy="76" r="8" />
+                            <circle cx="685" cy="347" r="8" />
+                            <circle cx="858" cy="141" r="8" />
+                            <circle cx="874" cy="670" r="8" transform="rotate(180 874 670)" />
+                            <circle cx="657" cy="488" r="8" transform="rotate(180 657 488)" />
+                            <circle cx="443" cy="604" r="8" transform="rotate(180 443 604)" />
+                            <circle cx="339" cy="339" r="8" transform="rotate(180 339 339)" />
+                            <circle cx="24" cy="537" r="8" transform="rotate(180 24 537)" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+
+
+
+
+
+
+            <div class="position-absolute overflow-y-hidden z-3" style="height: 100vh; width: 100vw">
+                <div
+                    class="position-absolute top-0 left-0 d-flex z-3 justify-content-center align-items-center w-100 h-100">
+                    <div class="text-center">
+                        <h1 class="display-1 fw-bolder text-capitalize text-black"
+                            style="font-family: 'Roboto Serif', serif">
+                            Welcome to BOOKET!</h1>
+                        <a href="/login" class="btn btn-outline-primary px-4 z-3 py-2 fs-5 mt-5">Get started</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+    </body>
+
+    </html>
+
 
     <div class="container">
         <div class="row mx-auto my-5 align-items-center">
@@ -174,8 +344,8 @@
                     <div class="row row-cols-6 g-4 justify-content-center mt-5">
 
                         <div class="col-12 col-md-3">
-                            <img src="{{ asset('img/Estefany.jpg') }}" class="card-img-top d-flex justify-content-center"
-                                alt="Estefany" style="}">
+                            <img src="{{ asset('img/Estefany.jpg') }}"
+                                class="card-img-top d-flex justify-content-center" alt="Estefany" style="}">
 
                             <div class="card-body mt-3 text-center" style="font-family:'Teachers'">
                                 <h5 class="card-title">Estefany Mancia</h5>
@@ -184,8 +354,8 @@
 
                         </div>
                         <div class="col-12 col-md-3">
-                            <img src="{{ asset('img/Kelvin.jpg') }}" class="card-img-top d-flex justify-content-center"
-                                alt="Estefany">
+                            <img src="{{ asset('img/Kelvin.jpg') }}"
+                                class="card-img-top d-flex justify-content-center" alt="Estefany">
 
                             <div class="card-body mt-3 text-center" style="font-family:'Teachers'">
                                 <h5 class="card-title">Kelvin Gamez</h5>
@@ -202,16 +372,16 @@
                         </div>
 
                         <div class="col-12 col-md-3">
-                            <img src="{{ asset('img/Anibal.jpg') }}" class="card-img-top d-flex justify-content-center"
-                                alt="Estefany">
+                            <img src="{{ asset('img/Anibal.jpg') }}"
+                                class="card-img-top d-flex justify-content-center" alt="Estefany">
                             <div class="card-body mt-3 text-center" style="font-family:'Teachers'">
                                 <h5 class="card-title">Anibal Mendez</h5>
                                 <p class="card-text">Back-end developer.</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-3">
-                            <img src="{{ asset('img/Yami.jpg') }}"
-                                class="card-img-top d-flex justify-content-center" alt="Estefany">
+                            <img src="{{ asset('img/Yami.jpg') }}" class="card-img-top d-flex justify-content-center"
+                                alt="Estefany">
                             <div class="card-body mt-3 text-center">
                                 <h5 class="card-title" style="font-family:'Teachers'">Ana Garcia</h5>
                                 <p class="card-text" style="font-family:'Teachers'">Front-end developer.</p>
@@ -268,7 +438,8 @@
             <img src="{{ asset('img/vision.jpg') }}" width="180" height="160">
             <div>
                 <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Vision</h3>
-                <p class="px-4" style="font-family:'Teachers'">Our vision is to reach the entire university community
+                <p class="px-4" style="font-family:'Teachers'">Our vision is to reach the entire university
+                    community
                     and be the first
                     choice for university students seeking academic resources, becoming a platform
                     recognized for the innovation and accessibility that "BOOKET" offers. We aspire to
@@ -284,7 +455,8 @@
             <img src="{{ asset('img/inovation.jpg') }}" alt="Inovation" width="180c" height="160"></a>
             <div>
                 <h3 class="fs-5 mt-4 px-4 pb-1" style="font-family:'Teachers'">Innovation</h3>
-                <p class="px-4" style="font-family:'Teachers'; fornt-size:'100%'">We are promoting a solution using technology, with the purpose of
+                <p class="px-4" style="font-family:'Teachers'; fornt-size:'100%'">We are promoting a solution using
+                    technology, with the purpose of
                     effectively addressing the current challenges often faced by university students.</p>
             </div>
         </div>
