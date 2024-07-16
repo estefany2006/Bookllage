@@ -218,4 +218,7 @@ Route::get('/perfil', function () {
     return view('perfil');
 });
 
+Route::get('/chat', function () {
+    return view('chat');
+});
 
