@@ -35,7 +35,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario con Nieve</title>
+    <title>Formulario</title>
     <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Corben:700');

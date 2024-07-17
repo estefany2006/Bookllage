@@ -1,11 +1,6 @@
 <x-layout>
 
     <style>
-        body {
-            background-image: url("img/lib.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
 
         .form-box input:focus {
             box-shadow: 0 0 0;
@@ -14,7 +9,7 @@
 
         .register{
             /*background: linear-gradient(#5688a7, transparent);*/
-            background: linear-gradient(#284259af, #8e81e662, #a6b2f777);
+            background: #766BBF;
         }
     </style>
 

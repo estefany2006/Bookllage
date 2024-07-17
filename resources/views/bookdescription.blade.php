@@ -261,7 +261,7 @@
                     </div>
 
 
-                    <a href="/email">
+                    <a href="/chat">
                         <button class="btn-add-to-cart">
                             <i class="fa-solid fa-plus"></i>
                             contact with the seller

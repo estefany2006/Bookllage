@@ -145,6 +145,7 @@ Route::post('/bookTransaction', function () {
         'book_id' => 'required|exists:books,id',
         'address' => 'required',
         'district_id' => 'required|exists:districts,id',
+        'municipalities_id' => 'required|exists:municipalities,id',
         'price' => 'required',
         'description' => 'required',
     ]);
